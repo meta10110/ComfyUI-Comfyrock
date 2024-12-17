@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -59,7 +59,7 @@ class CR_SimpleMemeTemplate:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("image", "show_help", )  
     FUNCTION = "make_meme"
-    CATEGORY = icons.get("Comfyroll/Graphics/Template")
+    CATEGORY = icons.get("comfyrock/Graphics/Template")
 
     def make_meme(self, image, preset,
                   text_top, text_bottom,
@@ -169,7 +169,7 @@ class CR_SimpleMemeTemplate:
         # Batch the images
         images_out = torch.cat(total_images, 0)
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Template-Nodes#cr-simple-meme-template"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Template-Nodes#cr-simple-meme-template"
             
         return (images_out, show_help, )
 
@@ -208,7 +208,7 @@ class CR_SimpleBanner:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("image", "show_help", )
     FUNCTION = "make_banner"
-    CATEGORY = icons.get("Comfyroll/Graphics/Template")
+    CATEGORY = icons.get("comfyrock/Graphics/Template")
 
     def make_banner(self, image, banner_text,
                   font_name, max_font_size, font_color,
@@ -257,7 +257,7 @@ class CR_SimpleBanner:
         # Batch the images
         images_out = torch.cat(total_images, 0)
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Template-Nodes#cr-simple-banner"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Template-Nodes#cr-simple-banner"
           
         return (images_out, show_help, )
     
@@ -303,7 +303,7 @@ class CR_ComicPanelTemplates:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("image", "show_help", )
     FUNCTION = "layout"
-    CATEGORY = icons.get("Comfyroll/Graphics/Template")
+    CATEGORY = icons.get("comfyrock/Graphics/Template")
     
     def layout(self, page_width, page_height, template, reading_direction,
                border_thickness, outline_thickness, 
@@ -383,7 +383,7 @@ class CR_ComicPanelTemplates:
         if border_thickness > 0:
             page = ImageOps.expand(page, border_thickness, bg_color)
             
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Template-Nodes#cr-comic-panel-templates"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Template-Nodes#cr-comic-panel-templates"
 
         return (pil2tensor(page), show_help, )   
 
@@ -415,13 +415,13 @@ class CR_SimpleImageCompare:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("image", "show_help", )
     FUNCTION = "layout"
-    CATEGORY = icons.get("Comfyroll/Graphics/Template")
+    CATEGORY = icons.get("comfyrock/Graphics/Template")
     
     def layout(self, text1, text2,
                footer_height, font_name, font_size, mode,
                border_thickness, image1=None, image2=None):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Layout-Nodes#cr-simple-image-compare"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Layout-Nodes#cr-simple-image-compare"
 
         # Get RGB values for the text and background colors
         if mode == "normal":
@@ -517,11 +517,11 @@ class CR_ThumbnailPreview:
     RETURN_NAMES = ("show_help", )
     OUTPUT_NODE = True    
     FUNCTION = "thumbnail"
-    CATEGORY = icons.get("Comfyroll/Graphics/Template")
+    CATEGORY = icons.get("comfyrock/Graphics/Template")
     
     def thumbnail(self, image, rescale_factor, max_columns):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Template-Nodes#cr-thumbnail-preview"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Template-Nodes#cr-thumbnail-preview"
         
         result_images = []
         outline_thickness = 1
@@ -570,11 +570,11 @@ class CR_SeamlessChecker:
     RETURN_NAMES = ("show_help", )
     OUTPUT_NODE = True    
     FUNCTION = "thumbnail"
-    CATEGORY = icons.get("Comfyroll/Graphics/Template")
+    CATEGORY = icons.get("comfyrock/Graphics/Template")
     
     def thumbnail(self, image, rescale_factor, grid_options):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-seamless-checker"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-seamless-checker"
         
         outline_thickness = 0
       

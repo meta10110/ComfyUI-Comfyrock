@@ -18,7 +18,7 @@ class CR_DebatchFrames:
     RETURN_NAMES = ("debatched_frames",)
     OUTPUT_IS_LIST = (True,)
     FUNCTION = "debatch"
-    CATEGORY = icons.get("Comfyroll/Animation/Utils")
+    CATEGORY = icons.get("comfyrock/Animation/Utils")
 
     def debatch(self, frames):
         images = [frames[i:i + 1, ...] for i in range(frames.shape[0])]
@@ -38,7 +38,7 @@ class CR_CurrentFrame:
     RETURN_TYPES = ("INT",)
     RETURN_NAMES = ("index",)
     FUNCTION = "to_console"
-    CATEGORY = icons.get("Comfyroll/Animation/Utils")
+    CATEGORY = icons.get("comfyrock/Animation/Utils")
     
     def to_console(self, index, print_to_console):
         if print_to_console == "Yes":

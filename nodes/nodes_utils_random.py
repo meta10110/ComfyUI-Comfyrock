@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -39,7 +39,7 @@ class CR_RandomHexColor:
     RETURN_TYPES = ("STRING", "STRING", "STRING", "STRING", "STRING", )
     RETURN_NAMES = ("hex_color1", "hex_color2", "hex_color3", "hex_color4", "show_help", )
     FUNCTION = "get_colors"
-    CATEGORY = icons.get("Comfyroll/Utils/Random")
+    CATEGORY = icons.get("comfyrock/Utils/Random")
 
     def get_colors(self, seed):
     
@@ -51,7 +51,7 @@ class CR_RandomHexColor:
         hex_color3 = random_hex_color()
         hex_color4 = random_hex_color()
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-random-hex-color"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-random-hex-color"
              
         return (hex_color1, hex_color2, hex_color3, hex_color4, show_help, )
 
@@ -66,7 +66,7 @@ class CR_RandomRGB:
     RETURN_TYPES = ("STRING", "STRING", "STRING", "STRING", "STRING", )
     RETURN_NAMES = ("rgb_1", "rgb_2", "rgb_3", "rgb_4", "show_help", )
     FUNCTION = "get_colors"
-    CATEGORY = icons.get("Comfyroll/Utils/Random")
+    CATEGORY = icons.get("comfyrock/Utils/Random")
 
     def get_colors(self, seed):
     
@@ -78,7 +78,7 @@ class CR_RandomRGB:
         rgb_3 = random_rgb()
         rgb_4 = random_rgb()
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-random-rgb"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-random-rgb"
              
         return (rgb_1, rgb_2, rgb_3, rgb_4, show_help, )
 
@@ -102,11 +102,11 @@ class CR_RandomMultilineValues:
     RETURN_TYPES = (any_type, "STRING", )
     RETURN_NAMES = ("multiline_text", "show_help", )
     FUNCTION = "generate"
-    CATEGORY = icons.get("Comfyroll/Utils/Random")
+    CATEGORY = icons.get("comfyrock/Utils/Random")
 
     def generate(self, value_type, rows, string_length, custom_values, seed, prepend_text):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-random-multiline-values"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-random-multiline-values"
         
         # Set the seed
         random.seed(seed)
@@ -150,11 +150,11 @@ class CR_RandomMultilineColors:
     RETURN_TYPES = ("STRING", "STRING", )
     RETURN_NAMES = ("multiline_text", "show_help", )
     FUNCTION = "generate"
-    CATEGORY = icons.get("Comfyroll/Utils/Random")
+    CATEGORY = icons.get("comfyrock/Utils/Random")
 
     def generate(self, value_type, rows, seed):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-random-multiline-colors"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-random-multiline-colors"
         
         # Set the seed
         random.seed(seed)
@@ -193,11 +193,11 @@ class CR_RandomPanelCodes:
     RETURN_TYPES = ("STRING", "STRING", )
     RETURN_NAMES = ("multiline_text", "show_help", )
     FUNCTION = "generate"
-    CATEGORY = icons.get("Comfyroll/Utils/Random")
+    CATEGORY = icons.get("comfyrock/Utils/Random")
 
     def generate(self, rows, string_length, values, seed):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-random-panel-codes"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-random-panel-codes"
         
         # Set the seed
         random.seed(seed)
@@ -230,11 +230,11 @@ class CR_RandomRGBGradient:
     RETURN_TYPES = ("STRING", "STRING", )
     RETURN_NAMES = ("multiline_text", "show_help", )
     FUNCTION = "generate"
-    CATEGORY = icons.get("Comfyroll/Utils/Random")
+    CATEGORY = icons.get("comfyrock/Utils/Random")
 
     def generate(self, rows, seed):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-random-RGB-gradient"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-random-RGB-gradient"
     
         # Set the seed
         random.seed(seed)

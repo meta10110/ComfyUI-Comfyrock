@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 # based on https://github.com/LEv145/images-grid-comfy-plugin
@@ -63,7 +63,7 @@ class CR_XYList:
     RETURN_TYPES = ("STRING", "STRING", "STRING", "STRING", "BOOLEAN", "STRING", )
     RETURN_NAMES = ("X", "Y", "x_annotation", "y_annotation", "trigger", "show_help", ) 
     FUNCTION = "cross_join"
-    CATEGORY = icons.get("Comfyroll/XY Grid") 
+    CATEGORY = icons.get("comfyrock/XY Grid") 
     
     def cross_join(self, list1, list2, x_prepend, x_append, x_annotation_prepend,
     y_prepend, y_append, y_annotation_prepend, index):
@@ -102,7 +102,7 @@ class CR_XYList:
             y_ann_out = "".join([str(item) for item in y_ann_out])
             trigger = True
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/XY-Grid-Nodes#cr-xy-list"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/XY-Grid-Nodes#cr-xy-list"
 
         return (x_out, y_out, x_ann_out, y_ann_out, trigger, show_help, )
 
@@ -129,7 +129,7 @@ class CR_XYInterpolate:
     RETURN_TYPES = ("FLOAT", "FLOAT", "STRING", "STRING", "BOOLEAN", "STRING", )
     RETURN_NAMES = ("X", "Y", "x_annotation", "y_annotation", "trigger", "show_help", )    
     FUNCTION = "gradient"
-    CATEGORY = icons.get("Comfyroll/XY Grid") 
+    CATEGORY = icons.get("comfyrock/XY Grid") 
 
     def gradient(self, x_columns, x_start_value, x_step, x_annotation_prepend,
     y_rows, y_start_value, y_step, y_annotation_prepend, 
@@ -166,7 +166,7 @@ class CR_XYInterpolate:
             print(x_ann_out,y_ann_out)
             trigger = True
              
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/XY-Grid-Nodes#cr-xy-interpolate"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/XY-Grid-Nodes#cr-xy-interpolate"
 
         return (x_float_out, y_float_out, x_ann_out, y_ann_out, trigger, show_help, )
    
@@ -186,7 +186,7 @@ class CR_XYIndex:
     RETURN_TYPES = ("INT", "INT", "STRING", )
     RETURN_NAMES = ("x", "y", "show_help", )    
     FUNCTION = "index"
-    CATEGORY = icons.get("Comfyroll/XY Grid") 
+    CATEGORY = icons.get("comfyrock/XY Grid") 
 
     def index(self, x_columns, y_rows, index):
 
@@ -196,7 +196,7 @@ class CR_XYIndex:
         x = index % x_columns
         y = int(index / x_columns)  
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/XY-Grid-Nodes#cr-xy-index"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/XY-Grid-Nodes#cr-xy-index"
 
         return (x, y, show_help, )
        
@@ -227,10 +227,10 @@ class CR_XYFromFolder:
     RETURN_TYPES = ("IMAGE", "BOOLEAN", "STRING", )
     RETURN_NAMES = ("IMAGE", "trigger", "show_help", )
     FUNCTION = "load_images"
-    CATEGORY = icons.get("Comfyroll/XY Grid") 
+    CATEGORY = icons.get("comfyrock/XY Grid") 
     
     def load_images(self, image_folder, start_index, end_index, max_columns, x_annotation, y_annotation, font_size, gap, trigger=False):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/XY-Grid-Nodes#cr-xy-from-folder"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/XY-Grid-Nodes#cr-xy-from-folder"
 
         if trigger == False:
             return((), False, show_help, )
@@ -307,7 +307,7 @@ class CR_XYSaveGridImage:
     RETURN_TYPES = ()
     FUNCTION = "save_image"
     OUTPUT_NODE = True
-    CATEGORY = icons.get("Comfyroll/XY Grid") 
+    CATEGORY = icons.get("comfyrock/XY Grid") 
             
     def save_image(self, mode, output_folder, image, file_format, output_path='', filename_prefix="CR", trigger=False):
 

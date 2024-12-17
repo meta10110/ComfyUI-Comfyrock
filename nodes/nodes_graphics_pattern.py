@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -41,7 +41,7 @@ class CR_BinaryPatternSimple:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "draw_pattern"
-    CATEGORY = icons.get("Comfyroll/Graphics/Pattern")
+    CATEGORY = icons.get("comfyrock/Graphics/Pattern")
 
     def draw_pattern(self, binary_pattern, width, height):
         # Convert multiline binary pattern to a 2D list
@@ -70,7 +70,7 @@ class CR_BinaryPatternSimple:
 
         image_out = pil2tensor(image)
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes-2#cr-simple-binary-pattern"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes-2#cr-simple-binary-pattern"
  
         # Convert the PIL image back to a torch tensor
         return (image_out, show_help, )
@@ -104,7 +104,7 @@ class CR_BinaryPattern:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "draw_pattern"
-    CATEGORY = icons.get("Comfyroll/Graphics/Pattern")
+    CATEGORY = icons.get("comfyrock/Graphics/Pattern")
 
     def draw_pattern(self, binary_pattern, width, height,
                      background_color, outline_color,
@@ -158,7 +158,7 @@ class CR_BinaryPattern:
 
         image_out = pil2tensor(image)
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes-2#cr-binary-pattern"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes-2#cr-binary-pattern"
  
         # Convert the PIL image back to a torch tensor
         return (image_out, show_help, )
@@ -194,7 +194,7 @@ class CR_DrawShape:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "make_shape"
-    CATEGORY = icons.get("Comfyroll/Graphics/Shape")
+    CATEGORY = icons.get("comfyrock/Graphics/Shape")
     
     def make_shape(self, width, height, rotation,
                       shape, shape_color, back_color,
@@ -243,7 +243,7 @@ class CR_DrawShape:
 
         image_out = pil2tensor(result_image)
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes-2#cr-draw-shape"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes-2#cr-draw-shape"
 
         return (image_out, show_help, )  
 
@@ -278,7 +278,7 @@ class CR_ShapeScheduler:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "make_shape"
-    CATEGORY = icons.get("Comfyroll/Graphics/Shape")
+    CATEGORY = icons.get("comfyrock/Graphics/Shape")
     
     def make_shape(self, width, height, rotation,
                       shape, shape_color, back_color, schedule,
@@ -328,7 +328,7 @@ class CR_ShapeScheduler:
 
         image_out = pil2tensor(result_image)
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes-2#cr-draw-shape"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes-2#cr-draw-shape"
 
         return (image_out, show_help, )  
 '''
@@ -359,7 +359,7 @@ class CR_DrawPie:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "make_shape"
-    CATEGORY = icons.get("Comfyroll/Graphics/Shape")
+    CATEGORY = icons.get("comfyrock/Graphics/Shape")
     
     def make_shape(self, width, height, rotation,
                       pie_start, pie_stop, shape_color, back_color,
@@ -390,7 +390,7 @@ class CR_DrawPie:
 
         image_out = pil2tensor(result_image.convert("RGB"))
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes-2#cr-draw-pie"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes-2#cr-draw-pie"
 
         return (image_out, show_help, )  
 
@@ -421,7 +421,7 @@ class CR_RandomShapePattern:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "plot_random_shapes"
-    CATEGORY = icons.get("Comfyroll/Graphics/Shape")
+    CATEGORY = icons.get("comfyrock/Graphics/Shape")
 
     def plot_random_shapes(self, num_rows, num_cols, width, height, color1, color2,
                            color1_hex="#000000", color2_hex="#000000"):
@@ -461,7 +461,7 @@ class CR_RandomShapePattern:
 
         image_out = pil2tensor(image)
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes-2#cr-random-shape-pattern"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes-2#cr-random-shape-pattern"
 
         return (image_out, show_help, )  
      

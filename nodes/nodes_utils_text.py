@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -35,7 +35,7 @@ class CR_SplitString:
     RETURN_TYPES = (any_type, any_type, any_type, any_type, "STRING", )
     RETURN_NAMES = ("string_1", "string_2", "string_3", "string_4", "show_help", )    
     FUNCTION = "split"
-    CATEGORY = icons.get("Comfyroll/Utils/Text")
+    CATEGORY = icons.get("comfyrock/Utils/Text")
 
     def split(self, text, delimiter=""):
 
@@ -44,7 +44,7 @@ class CR_SplitString:
         strings = [part.strip() for part in parts[:4]]
         string_1, string_2, string_3, string_4 = strings + [""] * (4 - len(strings))            
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-split-string"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-split-string"
 
         return (string_1, string_2, string_3, string_4, show_help, )
 
@@ -62,11 +62,11 @@ class CR_Text:
     RETURN_TYPES = (any_type, "STRING", )
     RETURN_NAMES = ("text", "show_help", )
     FUNCTION = "text_multiline"
-    CATEGORY = icons.get("Comfyroll/Utils/Text")
+    CATEGORY = icons.get("comfyrock/Utils/Text")
 
     def text_multiline(self, text):
             
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-text"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-text"
 
         return (text, show_help,)
 
@@ -89,7 +89,7 @@ class CR_MultilineText:
     RETURN_TYPES = (any_type, "STRING", )
     RETURN_NAMES = ("multiline_text", "show_help", )
     FUNCTION = "text_multiline"
-    CATEGORY = icons.get("Comfyroll/Utils/Text")
+    CATEGORY = icons.get("comfyrock/Utils/Text")
 
     def text_multiline(self, text, chars_to_remove, split_string=False, remove_chars=False, convert_from_csv=False, csv_quote_char="'"):
     
@@ -135,7 +135,7 @@ class CR_MultilineText:
 
         new_text = "\n".join(new_text)
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-multiline-text"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-multiline-text"
 
         return (new_text, show_help,)
 
@@ -156,11 +156,11 @@ class CR_SaveTextToFile:
     RETURN_NAMES = ("show_help", ) 
     OUTPUT_NODE= True
     FUNCTION = 'save_list'
-    CATEGORY = icons.get("Comfyroll/Utils/Text")
+    CATEGORY = icons.get("comfyrock/Utils/Text")
 
     def save_list(self, multiline_text, output_file_path, file_name, file_extension):
     
-        show_help =  "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-save-text-to-file" 
+        show_help =  "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-save-text-to-file" 
     
         filepath = output_file_path + "\\" + file_name + "." + file_extension
  
@@ -213,11 +213,11 @@ class CR_TextConcatenate:
     RETURN_TYPES = (any_type, "STRING", )
     RETURN_NAMES = ("STRING", "show_help", )
     FUNCTION = "concat_text"
-    CATEGORY = icons.get("Comfyroll/Utils/Text")
+    CATEGORY = icons.get("comfyrock/Utils/Text")
 
     def concat_text(self, text1="", text2="", separator=""):
     
-        show_help =  "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-save-text-to-file" 
+        show_help =  "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-save-text-to-file" 
         
         return (text1 + separator + text2, )
 
@@ -243,11 +243,11 @@ class CR_TextReplace:
     RETURN_TYPES = (any_type, "STRING", )
     RETURN_NAMES = ("STRING", "show_help", )
     FUNCTION = "replace_text"
-    CATEGORY = icons.get("Comfyroll/Utils/Text")
+    CATEGORY = icons.get("comfyrock/Utils/Text")
 
     def replace_text(self, text, find1="", replace1="", find2="", replace2="", find3="", replace3=""):
     
-        show_help =  "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-text-replace" 
+        show_help =  "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-text-replace" 
         
         text = text.replace(find1, replace1)
         text = text.replace(find2, replace2)
@@ -273,11 +273,11 @@ class CR_TextBlacklist:
     RETURN_TYPES = (any_type, "STRING", )
     RETURN_NAMES = ("STRING", "show_help", )
     FUNCTION = "replace_text"
-    CATEGORY = icons.get("Comfyroll/Utils/Text")
+    CATEGORY = icons.get("comfyrock/Utils/Text")
 
     def replace_text(self, text, blacklist_words, replacement_text=""):
     
-        show_help =  "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-text-blacklist" 
+        show_help =  "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-text-blacklist" 
          
         text_out = text 
         
@@ -305,11 +305,11 @@ class CR_TextOperation:
     RETURN_TYPES = (any_type, "STRING", )
     RETURN_NAMES = ("STRING", "show_help", )
     FUNCTION = "text_operation"
-    CATEGORY = icons.get("Comfyroll/Utils/Text")
+    CATEGORY = icons.get("comfyrock/Utils/Text")
 
     def text_operation(self, text, operation):
     
-        show_help =  "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-text_operation" 
+        show_help =  "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-text_operation" 
   
         if operation == "uppercase":
             text_out = text.upper()
@@ -345,11 +345,11 @@ class CR_TextLength:
     RETURN_TYPES = ("INT", "STRING", )
     RETURN_NAMES = ("INT", "show_help", )
     FUNCTION = "len_text"
-    CATEGORY = icons.get("Comfyroll/Utils/Text")
+    CATEGORY = icons.get("comfyrock/Utils/Text")
 
     def len_text(self, text):
     
-        show_help =  "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-text-length" 
+        show_help =  "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-text-length" 
   
         int_out = len(text)
 

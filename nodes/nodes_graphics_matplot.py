@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -24,7 +24,7 @@ from matplotlib.patches import RegularPolygon
 #---------------------------------------------------------------------------------------------------------------------#
 
 #icons = {
-#    "Comfyroll/Graphics/Pattern": "🧩 Comfyroll/👾 Graphics/🌈 Pattern",
+#    "comfyrock/Graphics/Pattern": "🧩 comfyrock/👾 Graphics/🌈 Pattern",
 #}
 
 # Dictionary to map color names to RGB values
@@ -117,7 +117,7 @@ class CR_HalftoneGrid:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "halftone"
-    CATEGORY = icons.get("Comfyroll/Graphics/Pattern")
+    CATEGORY = icons.get("comfyrock/Graphics/Pattern")
 
 
     def halftone(self, width, height, dot_style, reverse_dot_style, dot_frequency, background_color, x_pos, y_pos, bg_color_hex='#000000'):
@@ -154,7 +154,7 @@ class CR_HalftoneGrid:
 
         image_out = pil2tensor(img.convert("RGB"))
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes#cr-halftone-grid"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes#cr-halftone-grid"
         
         return(image_out, show_help, )
 
@@ -184,7 +184,7 @@ class CR_ColorBars:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "draw"
-    CATEGORY = icons.get("Comfyroll/Graphics/Pattern")
+    CATEGORY = icons.get("comfyrock/Graphics/Pattern")
 
     def draw(self, mode, width, height, color_1, color_2, 
              orientation, bar_frequency, offset=0,
@@ -257,7 +257,7 @@ class CR_ColorBars:
         
         image_out = pil2tensor(img.convert("RGB"))
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes#cr-color-bars"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes#cr-color-bars"
 
         return (image_out, show_help, )
 
@@ -281,7 +281,7 @@ class CR_StyleBars:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "draw"
-    CATEGORY = icons.get("Comfyroll/Graphics/Pattern")
+    CATEGORY = icons.get("comfyrock/Graphics/Pattern")
 
     def draw(self, mode, width, height, bar_style, orientation, bar_frequency):
            
@@ -327,7 +327,7 @@ class CR_StyleBars:
         
         image_out = pil2tensor(img.convert("RGB"))        
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes#cr-style-bars"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes#cr-style-bars"
 
         return (image_out, show_help, )
 
@@ -354,7 +354,7 @@ class CR_ColorGradient:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "draw"
-    CATEGORY = icons.get("Comfyroll/Graphics/Pattern")
+    CATEGORY = icons.get("comfyrock/Graphics/Pattern")
 
     def draw(self, width, height, start_color, end_color, orientation,
              linear_transition=0.5, gradient_distance=1,
@@ -424,7 +424,7 @@ class CR_ColorGradient:
         
         image_out = pil2tensor(img.convert("RGB"))         
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes#cr-color-gradient"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes#cr-color-gradient"
 
         return (image_out, show_help, )
 
@@ -451,7 +451,7 @@ class CR_RadialGradient:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_Help", )
     FUNCTION = "draw"
-    CATEGORY = icons.get("Comfyroll/Graphics/Pattern")
+    CATEGORY = icons.get("comfyrock/Graphics/Pattern")
 
     def draw(self, width, height, start_color, end_color, 
              radial_center_x=0.5, radial_center_y=0.5, gradient_distance=1,
@@ -498,7 +498,7 @@ class CR_RadialGradient:
 
         image_out = pil2tensor(img.convert("RGB"))
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes#cr-radial-gradiant"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes#cr-radial-gradiant"
 
         return (image_out, show_help, )
         
@@ -528,7 +528,7 @@ class CR_CheckerPattern:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "draw"
-    CATEGORY = icons.get("Comfyroll/Graphics/Pattern")
+    CATEGORY = icons.get("comfyrock/Graphics/Pattern")
 
     def draw(self, mode, width, height, color_1, color_2,
              grid_frequency, step,
@@ -578,7 +578,7 @@ class CR_CheckerPattern:
 
         image_out = pil2tensor(img.convert("RGB"))         
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes#cr-checker-pattern"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes#cr-checker-pattern"
 
         return (image_out, show_help, )
        
@@ -611,7 +611,7 @@ class CR_Polygons:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "draw"
-    CATEGORY = icons.get("Comfyroll/Graphics/Pattern")
+    CATEGORY = icons.get("comfyrock/Graphics/Pattern")
 
     def draw(self, mode, width, height, rows, columns,
              face_color, background_color, line_color, line_width,
@@ -665,7 +665,7 @@ class CR_Polygons:
 
         image_out = pil2tensor(img.convert("RGB"))         
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes#cr-polygons"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes#cr-polygons"
 
         return (image_out, show_help, )
 
@@ -696,7 +696,7 @@ class CR_StarburstLines:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "draw"
-    CATEGORY = icons.get("Comfyroll/Graphics/Pattern")
+    CATEGORY = icons.get("comfyrock/Graphics/Pattern")
     
     def draw(self, width, height, num_lines, line_length, line_width, line_color, background_color,
              center_x, center_y, rotation=0,
@@ -747,7 +747,7 @@ class CR_StarburstLines:
 
         image_out = pil2tensor(img.convert("RGB"))         
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes#cr-starburst-lines"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes#cr-starburst-lines"
 
         return (image_out, show_help, ) 
         
@@ -777,7 +777,7 @@ class CR_StarburstColors:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "draw"
-    CATEGORY = icons.get("Comfyroll/Graphics/Pattern")
+    CATEGORY = icons.get("comfyrock/Graphics/Pattern")
         
     def draw(self, width, height, num_triangles, color_1, color_2,
              center_x, center_y, bbox_factor, rotation=0,
@@ -842,7 +842,7 @@ class CR_StarburstColors:
 
         image_out = pil2tensor(img.convert("RGB"))         
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pattern-Nodes#cr-starburst-colors"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pattern-Nodes#cr-starburst-colors"
 
         return (image_out, show_help, )
 

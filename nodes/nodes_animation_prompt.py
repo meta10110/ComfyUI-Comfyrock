@@ -45,7 +45,7 @@ class CR_SimplePromptList:
     RETURN_TYPES = ("SIMPLE_PROMPT_LIST", "STRING", )
     RETURN_NAMES = ("SIMPLE_PROMPT_LIST", "show_help", )
     FUNCTION = "prompt_stacker"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def prompt_stacker(self, prompt_1, prompt_2, prompt_3, prompt_4, prompt_5, simple_prompt_list=None):
 
@@ -74,7 +74,7 @@ class CR_SimplePromptList:
             
         #print(f"[TEST] CR Simple Prompt List: {prompts}")        
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Prompt-Nodes#cr-simple-prompt-list"           
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Prompt-Nodes#cr-simple-prompt-list"           
 
         return (prompts, show_help, )
 
@@ -104,7 +104,7 @@ class CR_SimplePromptListKeyframes:
     RETURN_NAMES = ("keyframe_list", "show_help", )
     FUNCTION = "make_keyframes"
 
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def make_keyframes(self, simple_prompt_list, keyframe_interval, loops, transition_type, transition_speed, transition_profile, keyframe_format, ):
     
@@ -131,7 +131,7 @@ class CR_SimplePromptListKeyframes:
         keyframes_out = " ".join(keyframe_list)[:-2]
               
         #print(f"[TEST] CR Simple Prompt List Keyframes: {keyframes_out}")   
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Prompt-Nodes#cr-simple-prompt-list-keyframes"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Prompt-Nodes#cr-simple-prompt-list-keyframes"
 
         return (keyframes_out, show_help, )
  
@@ -181,7 +181,7 @@ class CR_PromptList:
     RETURN_TYPES = ("PROMPT_LIST", "STRING", )
     RETURN_NAMES = ("PROMPT_LIST", "show_help", )
     FUNCTION = "animation_stacker"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def animation_stacker(self, keyframe_interval, loops, 
         prompt_1, transition_type1, transition_speed1, transition_profile1, 
@@ -221,7 +221,7 @@ class CR_PromptList:
                 transition_profile5, keyframe_interval, j)]),
         
         #print(f"[TEST] CR Prompt List: {keyframe_list}") 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Prompt-Nodes#cr-prompt-list"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Prompt-Nodes#cr-prompt-list"
 
         return (keyframe_list, show_help, )
 '''
@@ -237,7 +237,7 @@ class CR_PromptListKeyframes:
     RETURN_TYPES = ("STRING", "STRING", )
     RETURN_NAMES = ("keyframe_list", "show_help", )
     FUNCTION = "make_keyframes"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def make_keyframes(self, prompt_list, keyframe_format):
     
@@ -266,7 +266,7 @@ class CR_PromptListKeyframes:
         keyframes_out = "".join(keyframe_list)[:-2]
         
         #print(f"[TEST] CR Prompt List Keyframes: {keyframes_out}")   
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Prompt-Nodes#cr-prompt-list-keyframes"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Prompt-Nodes#cr-prompt-list-keyframes"
 
         return (keyframes_out, show_help, )
 
@@ -284,10 +284,10 @@ class CR_KeyframeList:
     RETURN_TYPES = ("STRING", "STRING", )
     RETURN_NAMES = ("keyframe_list", "show_help", )
     FUNCTION = "keyframelist"
-    CATEGORY = icons.get("Comfyroll/Animation/Prompt")
+    CATEGORY = icons.get("comfyrock/Animation/Prompt")
 
     def keyframelist(self, keyframe_list, keyframe_format):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Prompt-Nodes#cr-keyframe-list"          
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Prompt-Nodes#cr-keyframe-list"          
         return (keyframe_list, show_help, )
 
 #---------------------------------------------------------------------------------------------------------------------#
@@ -316,7 +316,7 @@ class CR_LoadPromptStyle:
     RETURN_TYPES = ("STRING", "STRING", "STRING", "STRING", )
     RETURN_NAMES = ("prepend_text", "append_text", "negative_text", "show_help", )
     FUNCTION = 'prompt_styler'
-    CATEGORY = icons.get("Comfyroll/Animation/Prompt")
+    CATEGORY = icons.get("comfyrock/Animation/Prompt")
 
     def prompt_styler(self, style, file_type):
 
@@ -341,7 +341,7 @@ class CR_LoadPromptStyle:
         append_text = split3[0].replace(" . ","")
         negative_text = split4[1][:-2]
       
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Prompt-Nodes#cr-load-prompt-style"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Prompt-Nodes#cr-load-prompt-style"
         
         return (prepend_text, append_text, negative_text, show_help, )
 
@@ -360,7 +360,7 @@ class CR_EncodeScheduledPrompts:
     RETURN_TYPES = ("CONDITIONING", "STRING", )
     RETURN_NAMES = ("CONDITIONING", "show_help", )
     FUNCTION = "condition"
-    CATEGORY = icons.get("Comfyroll/Animation/Prompt")
+    CATEGORY = icons.get("comfyrock/Animation/Prompt")
 
     def condition(self, clip, current_prompt, next_prompt, weight):      
         
@@ -401,7 +401,7 @@ class CR_EncodeScheduledPrompts:
 
             n = [tw, t_to]
             out.append(n)
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Prompt-Nodes#cr-encode-scheduled-prompts"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Prompt-Nodes#cr-encode-scheduled-prompts"
         return (out, show_help, )
         
 #---------------------------------------------------------------------------------------------------------------------#

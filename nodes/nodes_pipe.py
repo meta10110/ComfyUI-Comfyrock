@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 # based on Tiny Terra nodes
@@ -36,11 +36,11 @@ class CR_DataBusIn:
     RETURN_TYPES = ("PIPE_LINE", "STRING", )
     RETURN_NAMES = ("pipe", "show_help", )
     FUNCTION = "load_data"
-    CATEGORY = icons.get("Comfyroll/Pipe/Bus")
+    CATEGORY = icons.get("comfyrock/Pipe/Bus")
 
     def load_data(self, any1=None, any2=None, any3=None, any4=None, pipe=None):
  
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pipe-Nodes#cr-data-bus-in"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pipe-Nodes#cr-data-bus-in"
 
         # Initialize with default values
         new_any1, new_any2, new_any3, new_any4 = None, None, None, None
@@ -71,11 +71,11 @@ class CR_DataBusOut:
     RETURN_TYPES = ("PIPE_LINE", any_type, any_type, any_type, any_type, "STRING", )
     RETURN_NAMES = ("pipe", "any1", "any2", "any3", "any4", "show_help", )
     FUNCTION = "data_out"
-    CATEGORY = icons.get("Comfyroll/Pipe/Bus")
+    CATEGORY = icons.get("comfyrock/Pipe/Bus")
 
     def data_out(self, any1=None, any2=None, any3=None, any4=None, pipe=None):
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pipe-Nodes#cr-data-bus-out"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pipe-Nodes#cr-data-bus-out"
             
         new_any1, new_any2, new_any3, new_any4 = pipe
         
@@ -105,11 +105,11 @@ class CR_8ChannelIn:
     RETURN_TYPES = ("PIPE_LINE", "STRING", )
     RETURN_NAMES = ("pipe", "show_help", )
     FUNCTION = "load_data"
-    CATEGORY = icons.get("Comfyroll/Pipe/Bus")
+    CATEGORY = icons.get("comfyrock/Pipe/Bus")
 
     def load_data(self, ch1=None, ch2=None, ch3=None, ch4=None, ch5=None, ch6=None, ch7=None, ch8=None, pipe=None):
  
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pipe-Nodes#cr-8-channel-in"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pipe-Nodes#cr-8-channel-in"
 
         # Initialize with default values
         new_ch1, new_ch2, new_ch3, new_ch4, new_ch5, new_ch6, new_ch7, new_ch8 = None, None, None, None, None, None, None, None
@@ -144,11 +144,11 @@ class CR_8ChannelOut:
     RETURN_TYPES = ("PIPE_LINE", any_type, any_type, any_type, any_type, any_type, any_type, any_type, any_type, "STRING", )
     RETURN_NAMES = ("pipe", "ch1", "ch2", "ch3", "ch4", "ch5", "ch6", "ch7", "ch8", "show_help", )
     FUNCTION = "data_out"
-    CATEGORY = icons.get("Comfyroll/Pipe/Bus")
+    CATEGORY = icons.get("comfyrock/Pipe/Bus")
 
     def data_out(self, ch1=None, ch2=None, ch3=None, ch4=None, ch5=None, ch6=None, ch7=None, ch8=None, pipe=None):
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pipe-Nodes#cr-8-channel-out"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pipe-Nodes#cr-8-channel-out"
             
         new_ch1, new_ch2, new_ch3, new_ch4, new_ch5, new_ch6, new_ch7, new_ch8 = pipe
         
@@ -178,11 +178,11 @@ class CR_ModulePipeLoader:
     RETURN_TYPES = ("PIPE_LINE", "STRING", )
     RETURN_NAMES = ("pipe", "show_help", )
     FUNCTION = "pipe_input"
-    CATEGORY = icons.get("Comfyroll/Pipe/Module")
+    CATEGORY = icons.get("comfyrock/Pipe/Module")
 
     def pipe_input(self, model=0, pos=0, neg=0, latent=0, vae=0, clip=0, controlnet=0, image=0, seed=0):
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pipe-Nodes#cr-module-pipe-loader"   
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pipe-Nodes#cr-module-pipe-loader"   
         
         pipe_line = (model, pos, neg, latent, vae, clip, controlnet, image, seed)
 
@@ -200,11 +200,11 @@ class CR_ModuleInput:
     RETURN_TYPES = ("PIPE_LINE", "MODEL", "CONDITIONING", "CONDITIONING", "LATENT", "VAE", "CLIP", "CONTROL_NET", "IMAGE", "INT", "STRING", )
     RETURN_NAMES = ("pipe", "model", "pos", "neg", "latent", "vae", "clip", "controlnet", "image", "seed", "show_help", )
     FUNCTION = "flush"
-    CATEGORY = icons.get("Comfyroll/Pipe/Module")
+    CATEGORY = icons.get("comfyrock/Pipe/Module")
     
     def flush(self, pipe):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pipe-Nodes#cr-module-input"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pipe-Nodes#cr-module-input"
 
         model, pos, neg, latent, vae, clip, controlnet, image, seed = pipe
         
@@ -232,11 +232,11 @@ class CR_ModuleOutput:
     RETURN_TYPES = ("PIPE_LINE", "STRING", )
     RETURN_NAMES = ("pipe", "show_help", )
     FUNCTION = "pipe_output"
-    CATEGORY = icons.get("Comfyroll/Pipe/Module")
+    CATEGORY = icons.get("comfyrock/Pipe/Module")
 
     def pipe_output(self, pipe, model=None, pos=None, neg=None, latent=None, vae=None, clip=None, controlnet=None, image=None, seed=None):
        
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pipe-Nodes#cr-module-output"   
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pipe-Nodes#cr-module-output"   
     
         new_model, new_pos, new_neg, new_latent, new_vae, new_clip, new_controlnet, new_image, new_seed = pipe
 
@@ -292,11 +292,11 @@ class CR_ImagePipeIn:
     RETURN_TYPES = ("PIPE_LINE", "STRING", )
     RETURN_NAMES = ("pipe", "show_help", )
     FUNCTION = "pipe_in"
-    CATEGORY = icons.get("Comfyroll/Pipe/Image")
+    CATEGORY = icons.get("comfyrock/Pipe/Image")
 
     def pipe_in(self, image=0, width=0, height=0, upscale_factor=0):
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pipe-Nodes#cr-image-pipe-in"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pipe-Nodes#cr-image-pipe-in"
         
         pipe_line = (image, width, height, upscale_factor)
 
@@ -323,11 +323,11 @@ class CR_ImagePipeEdit:
     RETURN_TYPES = ("PIPE_LINE", "STRING", )
     RETURN_NAMES = ("pipe", "show_help", )
     FUNCTION = "pipe_edit"
-    CATEGORY = icons.get("Comfyroll/Pipe/Image")
+    CATEGORY = icons.get("comfyrock/Pipe/Image")
 
     def pipe_edit(self, pipe, image=None, width=None, height=None, upscale_factor=None):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pipe-Nodes#cr-image-pipe-edit"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pipe-Nodes#cr-image-pipe-edit"
             
         new_image, new_width, new_height, new_upscale_factor = pipe
 
@@ -359,11 +359,11 @@ class CR_ImagePipeOut:
     RETURN_TYPES = ("PIPE_LINE", "IMAGE", "INT", "INT", "FLOAT", "STRING", )
     RETURN_NAMES = ("pipe", "image", "width", "height", "upscale_factor", "show_help", )
     FUNCTION = "pipe_out"
-    CATEGORY = icons.get("Comfyroll/Pipe/Image")
+    CATEGORY = icons.get("comfyrock/Pipe/Image")
     
     def pipe_out(self, pipe):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pipe-Nodes#cr-image-pipe-out"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pipe-Nodes#cr-image-pipe-out"
 
         image, width, height, upscale_factor = pipe
         
@@ -388,11 +388,11 @@ class CR_InputSwitchPipe:
     RETURN_NAMES = ("PIPE_LINE", "show_help", )
     OUTPUT_NODE = True
     FUNCTION = "switch_pipe"
-    CATEGORY = icons.get("Comfyroll/Pipe")
+    CATEGORY = icons.get("comfyrock/Pipe")
 
     def switch_pipe(self, Input, pipe1, pipe2):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Pipe-Nodes#cr-pipe-switch"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Pipe-Nodes#cr-pipe-switch"
         
         if Input == 1:
             return (pipe1, show_help, )

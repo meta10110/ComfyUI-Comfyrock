@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -80,7 +80,7 @@ class CR_OverlayText:
     RETURN_TYPES = ("IMAGE", "STRING",)
     RETURN_NAMES = ("IMAGE", "show_help",)
     FUNCTION = "overlay_text"
-    CATEGORY = icons.get("Comfyroll/Graphics/Text")
+    CATEGORY = icons.get("comfyrock/Graphics/Text")
 
     def overlay_text(self, image, text, font_name, font_size, font_color,  
                      margins, line_spacing,
@@ -110,7 +110,7 @@ class CR_OverlayText:
         # Composite the text image onto the background image using the rotated text mask       
         image_out = Image.composite(text_image, back_image, rotated_text_mask)       
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Text-Nodes#cr-overlay-text"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Text-Nodes#cr-overlay-text"
         
         # Convert the PIL image back to a torch tensor
         return (pil2tensor(image_out), show_help,)
@@ -150,7 +150,7 @@ class CR_DrawText:
     RETURN_TYPES = ("IMAGE", "STRING",)
     RETURN_NAMES = ("IMAGE", "show_help",)
     FUNCTION = "draw_text"
-    CATEGORY = icons.get("Comfyroll/Graphics/Text")
+    CATEGORY = icons.get("comfyrock/Graphics/Text")
 
     def draw_text(self, image_width, image_height, text,
                   font_name, font_size, font_color, 
@@ -181,7 +181,7 @@ class CR_DrawText:
         # Composite the text image onto the background image using the rotated text mask
         image_out = Image.composite(text_image, back_image, rotated_text_mask)
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Text-Nodes#cr-draw-text"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Text-Nodes#cr-draw-text"
 
         # Convert the PIL image back to a torch tensor
         return (pil2tensor(image_out), show_help,)
@@ -218,7 +218,7 @@ class CR_MaskText:
     RETURN_TYPES = ("IMAGE", "STRING",)
     RETURN_NAMES = ("IMAGE", "show_help",)
     FUNCTION = "mask_text"
-    CATEGORY = icons.get("Comfyroll/Graphics/Text")
+    CATEGORY = icons.get("comfyrock/Graphics/Text")
     
     def mask_text(self, image, text, font_name, font_size,
                   margins, line_spacing, 
@@ -251,7 +251,7 @@ class CR_MaskText:
         # Composite the text image onto the background image using the inverted text mask        
         image_out = Image.composite(background_image, text_image, text_mask)
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Text-Nodes#cr-mask-text"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Text-Nodes#cr-mask-text"
         
         # Convert the PIL image back to a torch tensor
         return (pil2tensor(image_out), show_help,)
@@ -285,7 +285,7 @@ class CR_CompositeText:
     RETURN_TYPES = ("IMAGE", "STRING",)
     RETURN_NAMES = ("IMAGE", "show_help",)
     FUNCTION = "composite_text"
-    CATEGORY = icons.get("Comfyroll/Graphics/Text")
+    CATEGORY = icons.get("comfyrock/Graphics/Text")
     
     def composite_text(self, image_text, image_background, text,
                        font_name, font_size, 
@@ -313,7 +313,7 @@ class CR_CompositeText:
         # Composite the text image onto the background image using the rotated text mask
         image_out = Image.composite(text_image, back_image, rotated_text_mask)
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Text-Nodes#cr-composite-text"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Text-Nodes#cr-composite-text"
         
         # Convert the PIL image back to a torch tensor
         return (pil2tensor(image_out), show_help,)
@@ -332,7 +332,7 @@ class CR_ArabicTextRTL:
     RETURN_TYPES = ("STRING", "STRING", )
     RETURN_NAMES = ("arabic_text_rtl", "show help", )
     FUNCTION = "adjust_arabic_to_rtl"
-    CATEGORY = icons.get("Comfyroll/Graphics/Text")
+    CATEGORY = icons.get("comfyrock/Graphics/Text")
 
     def adjust_arabic_to_rtl(self, arabic_text):
         """
@@ -348,7 +348,7 @@ class CR_ArabicTextRTL:
         arabic_text_reshaped = arabic_reshaper.reshape(arabic_text)
         rtl_text = get_display(arabic_text_reshaped)
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Text-Nodes#cr-arabic-text-rtl"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Text-Nodes#cr-arabic-text-rtl"
                 
         return (rtl_text, show_help,)
 
@@ -382,7 +382,7 @@ class CR_SimpleTextWatermark:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "overlay_text"
-    CATEGORY = icons.get("Comfyroll/Graphics/Text")
+    CATEGORY = icons.get("comfyrock/Graphics/Text")
 
     def overlay_text(self, image, text, align,
                      font_name, font_size, font_color,
@@ -442,7 +442,7 @@ class CR_SimpleTextWatermark:
 
         images_out = torch.cat(total_images, 0)
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Text-Nodes#cr-simple-text-watermark"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Text-Nodes#cr-simple-text-watermark"
  
         # Convert the PIL image back to a torch tensor
         return (images_out, show_help, )
@@ -474,11 +474,11 @@ class CR_SelectFont:
     RETURN_TYPES = (any_type, "STRING",)
     RETURN_NAMES = ("font_name", "show_help",)
     FUNCTION = "select_font"
-    CATEGORY = icons.get("Comfyroll/Graphics/Text")
+    CATEGORY = icons.get("comfyrock/Graphics/Text")
 
     def select_font(self, font_name):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Text-Nodes#cr-select-font"    
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Text-Nodes#cr-select-font"    
        
         return (font_name, show_help,)     
   

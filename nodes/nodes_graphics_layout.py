@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -57,7 +57,7 @@ class CR_PageLayout:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("image", "show_help", )
     FUNCTION = "layout"
-    CATEGORY = icons.get("Comfyroll/Graphics/Layout")
+    CATEGORY = icons.get("comfyrock/Graphics/Layout")
     
     def layout(self, layout_options, image_panel,
                border_thickness, border_color, background_color,
@@ -122,7 +122,7 @@ class CR_PageLayout:
         if border_thickness > 0:
             combined_image = ImageOps.expand(combined_image, border_thickness, border_color)
             
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Layout-Nodes#cr-page-layout"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Layout-Nodes#cr-page-layout"
 
         return (pil2tensor(combined_image), show_help, )    
 
@@ -160,7 +160,7 @@ class CR_SimpleTitles:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("image", "show_help", )
     FUNCTION = "layout"
-    CATEGORY = icons.get("Comfyroll/Graphics/Layout")
+    CATEGORY = icons.get("comfyrock/Graphics/Layout")
     
     def layout(self, image,
                header_height, header_text, header_align, header_font_size, 
@@ -218,7 +218,7 @@ class CR_SimpleTitles:
        
         combined_image = combine_images(images, 'vertical')
           
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Layout-Nodes#cr-simple_titles"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Layout-Nodes#cr-simple_titles"
 
         return (pil2tensor(combined_image), show_help, )    
  
@@ -249,7 +249,7 @@ class CR_ImagePanel:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("image", "show_help", )
     FUNCTION = "make_panel"
-    CATEGORY = icons.get("Comfyroll/Graphics/Layout")
+    CATEGORY = icons.get("comfyrock/Graphics/Layout")
     
     def make_panel(self, image_1,
                    border_thickness, border_color,
@@ -278,7 +278,7 @@ class CR_ImagePanel:
 
         combined_image = combine_images(images, layout_direction)
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Layout-Nodes#cr-image-panel"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Layout-Nodes#cr-image-panel"
 
         return (pil2tensor(combined_image), show_help, )   
 
@@ -304,14 +304,14 @@ class CR_ImageGridPanel:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("image", "show_help", )
     FUNCTION = "make_panel"
-    CATEGORY = icons.get("Comfyroll/Graphics/Layout")
+    CATEGORY = icons.get("comfyrock/Graphics/Layout")
     
     def make_panel(self, images,
                    border_thickness, border_color,
                    outline_thickness, outline_color, 
                    max_columns, border_color_hex='#000000'):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Layout-Nodes#cr-image-grid-panel"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Layout-Nodes#cr-image-grid-panel"
 
         border_color = get_color_values(border_color, border_color_hex, color_mapping)
 
@@ -351,7 +351,7 @@ class CR_ImageBorder:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("image", "show_help", )
     FUNCTION = "make_panel"
-    CATEGORY = icons.get("Comfyroll/Graphics/Layout")
+    CATEGORY = icons.get("comfyrock/Graphics/Layout")
     
     def make_panel(self, image,
                    top_thickness, bottom_thickness,
@@ -378,7 +378,7 @@ class CR_ImageBorder:
         
         images = torch.cat(images, dim=0)                
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Layout-Nodes#cr-image-border"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Layout-Nodes#cr-image-border"
 
         return (images, show_help, )
 
@@ -401,7 +401,7 @@ class CR_ColorPanel:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("image", "show_help", )
     FUNCTION = "make_panel"
-    CATEGORY = icons.get("Comfyroll/Graphics/Layout")
+    CATEGORY = icons.get("comfyrock/Graphics/Layout")
     
     def make_panel(self, panel_width, panel_height,
                    fill_color, fill_color_hex='#000000'):
@@ -411,7 +411,7 @@ class CR_ColorPanel:
         size = (panel_width, panel_height)
         panel = Image.new('RGB', size, fill_color)
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Layout-Nodes#cr-color-panel"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Layout-Nodes#cr-color-panel"
 
         return (pil2tensor(panel), show_help, )
 
@@ -446,7 +446,7 @@ class CR_SimpleTextPanel:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("image", "show_help", )
     FUNCTION = "layout"
-    CATEGORY = icons.get("Comfyroll/Graphics/Layout")
+    CATEGORY = icons.get("comfyrock/Graphics/Layout")
     
     def layout(self, panel_width, panel_height,
                text, align, justify,
@@ -479,7 +479,7 @@ class CR_SimpleTextPanel:
                            align, justify,
                            rotation_angle, rotation_options)
                                                        
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Layout-Nodes#cr-simple-text-panel"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Layout-Nodes#cr-simple-text-panel"
 
         return (pil2tensor(panel), show_help, )  
 
@@ -502,12 +502,12 @@ class CR_OverlayTransparentImage:
 
     RETURN_TYPES = ("IMAGE", )
     FUNCTION = "overlay_image"
-    CATEGORY = icons.get("Comfyroll/Graphics/Layout")
+    CATEGORY = icons.get("comfyrock/Graphics/Layout")
 
     def overlay_image(self, back_image, overlay_image, 
                       transparency, offset_x, offset_y, rotation_angle, overlay_scale_factor=1.0):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Layout-Nodes#cr-overlay-transparent-image"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Layout-Nodes#cr-overlay-transparent-image"
        
         # Create PIL images for the text and background layers and text mask
         back_image = tensor2pil(back_image)
@@ -559,7 +559,7 @@ class CR_FeatheredBorder:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("image", "show_help", )
     FUNCTION = "make_border"
-    CATEGORY = icons.get("Comfyroll/Graphics/Layout")
+    CATEGORY = icons.get("comfyrock/Graphics/Layout")
     
     def make_border(self, image,
                    top_thickness, bottom_thickness,
@@ -567,7 +567,7 @@ class CR_FeatheredBorder:
                    feather_amount,
                    border_color_hex='#000000'):
                    
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Layout-Nodes#cr-feathered-border"                   
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Layout-Nodes#cr-feathered-border"                   
 
         images = []
 
@@ -630,11 +630,11 @@ class CR_HalfDropPanel:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("image", "show_help", )
     FUNCTION = "make_panel"
-    CATEGORY = icons.get("Comfyroll/Graphics/Layout")
+    CATEGORY = icons.get("comfyrock/Graphics/Layout")
     
     def make_panel(self, image, pattern, drop_percentage=0.5):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Layout-Nodes#cr-half-drop-panel"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Layout-Nodes#cr-half-drop-panel"
 
         if pattern == "none":
             return (image, show_help, )
@@ -689,11 +689,11 @@ class CR_DiamondPanel:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("image", "show_help", )
     FUNCTION = "make_panel"
-    CATEGORY = icons.get("Comfyroll/Graphics/Layout")
+    CATEGORY = icons.get("comfyrock/Graphics/Layout")
     
     def make_panel(self, image, pattern, drop_percentage=0.5):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Layout-Nodes#cr-diamond-panel"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Layout-Nodes#cr-diamond-panel"
 
         if pattern == "none":
             return (image, show_help, )
@@ -763,7 +763,7 @@ class CR_SelectISOSize:
     RETURN_TYPES =("INT", "INT","STRING", )
     RETURN_NAMES =("width", "height","show_help", )
     FUNCTION = "get_size"    
-    CATEGORY = icons.get("Comfyroll/Utils/Other")
+    CATEGORY = icons.get("comfyrock/Utils/Other")
 
     def get_size(self, iso_size):
     
@@ -772,7 +772,7 @@ class CR_SelectISOSize:
         else:
             print("Size not found.")
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-select-iso-size"    
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-select-iso-size"    
       
         return (width, height, show_help, )
         

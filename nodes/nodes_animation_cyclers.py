@@ -43,10 +43,10 @@ class CR_CycleModels:
     RETURN_TYPES = ("MODEL", "CLIP", "VAE", "STRING", )
     RETURN_NAMES = ("MODEL", "CLIP", "VAE", "show_help", )
     FUNCTION = "cycle_models"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def cycle_models(self, mode, model, clip, model_list, frame_interval, loops, current_frame,):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Cycler-Nodes#cr-cycle-models"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Cycler-Nodes#cr-cycle-models"
 
         # Initialize the list
         model_params = list()
@@ -102,10 +102,10 @@ class CR_CycleLoRAs:
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", )
     RETURN_NAMES = ("MODEL", "CLIP", "show_help", )
     FUNCTION = "cycle"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def cycle(self, mode, model, clip, lora_list, frame_interval, loops, current_frame):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Cycler-Nodes#cr-cycle-loras"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Cycler-Nodes#cr-cycle-loras"
 
         # Initialize the list
         lora_params = list()
@@ -158,7 +158,7 @@ class CR_CycleText:
     RETURN_TYPES = ("STRING", "STRING", )
     RETURN_NAMES = ("STRING", "show_help", )
     FUNCTION = "cycle_text"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def cycle_text(self, mode, text_list, frame_interval, loops, current_frame,):
         
@@ -182,7 +182,7 @@ class CR_CycleText:
             text_alias, current_text_item = current_text_params            
             #print(f"[Debug] CR Cycle Text:{current_text_item}")
             
-            show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Cycler-Nodes#cr-cycle-text"
+            show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Cycler-Nodes#cr-cycle-text"
 
             return (current_text_item, show_help, )
 
@@ -211,7 +211,7 @@ class CR_CycleTextSimple:
     RETURN_TYPES = ("STRING", "STRING", )
     RETURN_NAMES = ("STRING", "show_help", )
     FUNCTION = "cycle_text"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def cycle_text(self, mode, frame_interval, loops, current_frame,
         text_1, text_2, text_3, text_4, text_5,
@@ -248,7 +248,7 @@ class CR_CycleTextSimple:
             # Get the parameters of the current text            
             current_text_item = text_params[current_text_index]          
             #print(f"[Debug] CR Cycle Text
-            show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Cycler-Nodes#cr-cycle-text-simple"
+            show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Cycler-Nodes#cr-cycle-text-simple"
 
             return (current_text_item, show_help, )
 
@@ -271,7 +271,7 @@ class CR_CycleImages:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "cycle"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def cycle(self, mode, image_list, frame_interval, loops, current_frame,):
     
@@ -292,7 +292,7 @@ class CR_CycleImages:
             current_image_params = image_params[current_image_index]
             image_alias, current_image_item = current_image_params            
             
-            show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Cycler-Nodes#cr-cycle-images"
+            show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Cycler-Nodes#cr-cycle-images"
 
             return (current_image_item, show_help, ) 
                 
@@ -321,7 +321,7 @@ class CR_CycleImagesSimple:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "cycle_image"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def cycle_image(self, mode, frame_interval, loops, current_frame,
         image_1=None, image_2=None, image_3=None, image_4=None, image_5=None,
@@ -355,7 +355,7 @@ class CR_CycleImagesSimple:
 
             # Get the parameters of the current image            
             current_image_item = image_params[current_image_index]          
-            show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Cycler-Nodes#cr-cycle-images-simple"
+            show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Cycler-Nodes#cr-cycle-images-simple"
             return (current_image_item, show_help, )
  
 #---------------------------------------------------------------------------------------------------------------------#

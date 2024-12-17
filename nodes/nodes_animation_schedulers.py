@@ -34,10 +34,10 @@ class CR_ValueScheduler:
     RETURN_TYPES = ("INT", "FLOAT", "STRING", )
     RETURN_NAMES = ("INT", "FLOAT", "show_help", )
     FUNCTION = "schedule"
-    CATEGORY = icons.get("Comfyroll/Animation/Schedulers")
+    CATEGORY = icons.get("comfyrock/Animation/Schedulers")
 
     def schedule(self, mode, current_frame, schedule_alias, default_value, schedule_format, schedule=None):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Scheduler-Nodes#cr-value-scheduler"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Scheduler-Nodes#cr-value-scheduler"
 
         if mode == "Default Value":
             print(f"[Info] CR Value Scheduler: Scheduler {schedule_alias} is disabled")
@@ -81,10 +81,10 @@ class CR_TextScheduler:
     RETURN_TYPES = ("STRING", "STRING", )
     RETURN_NAMES = ("STRING", "show_help", )
     FUNCTION = "schedule"
-    CATEGORY = icons.get("Comfyroll/Animation/Schedulers")
+    CATEGORY = icons.get("comfyrock/Animation/Schedulers")
 
     def schedule(self, mode, current_frame, schedule_alias, default_text, schedule_format, schedule=None):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Scheduler-Nodes#cr-text-scheduler"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Scheduler-Nodes#cr-text-scheduler"
 
         if mode == "Default Text":
             print(f"[Info] CR Text Scheduler: Scheduler {schedule_alias} is disabled")
@@ -133,10 +133,10 @@ class CR_PromptScheduler:
     RETURN_TYPES = ("STRING", "STRING", "FLOAT", "STRING", )
     RETURN_NAMES = ("current_prompt", "next_prompt", "weight", "show_help", )
     FUNCTION = "schedule"
-    CATEGORY = icons.get("Comfyroll/Animation/Schedulers")
+    CATEGORY = icons.get("comfyrock/Animation/Schedulers")
 
     def schedule(self, mode, prepend_text, append_text, current_frame, schedule_alias, default_prompt, schedule_format, interpolate_prompt, keyframe_list="", schedule=None):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Scheduler-Nodes#cr-prompt-scheduler"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Scheduler-Nodes#cr-prompt-scheduler"
 
         schedule_lines = list()    
     
@@ -216,7 +216,7 @@ class CR_SimplePromptScheduler:
     RETURN_TYPES = ("STRING", "STRING", "FLOAT", "STRING", )
     RETURN_NAMES = ("current_prompt", "next_prompt", "weight", "show_help", )
     FUNCTION = "simple_schedule"
-    CATEGORY = icons.get("Comfyroll/Animation/Schedulers")
+    CATEGORY = icons.get("comfyrock/Animation/Schedulers")
 
     def simple_schedule(self, keyframe_list, keyframe_format, current_frame):
         
@@ -255,7 +255,7 @@ class CR_SimplePromptScheduler:
             else:
                 weight_out = (to_index - current_frame) / (to_index - from_index)
             
-            show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Scheduler-Nodes#cr-simple-prompt-scheduler"
+            show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Scheduler-Nodes#cr-simple-prompt-scheduler"
 
             return(current_prompt_out, next_prompt_out, weight_out, show_help, )
             
@@ -272,7 +272,7 @@ class CR_SimpleValueScheduler:
     RETURN_TYPES = ("INT", "FLOAT", "STRING", )
     RETURN_NAMES = ("INT", "FLOAT", "show_help", )
     FUNCTION = "simple_schedule"
-    CATEGORY = icons.get("Comfyroll/Animation/Schedulers")
+    CATEGORY = icons.get("comfyrock/Animation/Schedulers")
 
     def simple_schedule(self, schedule, current_frame):
 
@@ -297,7 +297,7 @@ class CR_SimpleValueScheduler:
             except ValueError:
                 print(f"[Warning] CR Simple Value Scheduler. Invalid params {params} at frame {current_frame}")
 
-            show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Scheduler-Nodes#cr-simple-value-scheduler"
+            show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Scheduler-Nodes#cr-simple-value-scheduler"
 
             return (int_out, float_out, show_help, )
         
@@ -314,7 +314,7 @@ class CR_SimpleTextScheduler:
     RETURN_TYPES = ("STRING", "STRING", )
     RETURN_NAMES = ("STRING", "show_help", )
     FUNCTION = "simple_schedule"
-    CATEGORY = icons.get("Comfyroll/Animation/Schedulers")
+    CATEGORY = icons.get("comfyrock/Animation/Schedulers")
 
     def simple_schedule(self, schedule, current_frame):
         
@@ -338,7 +338,7 @@ class CR_SimpleTextScheduler:
             except ValueError:
                 print(f"[Warning] CR Simple Text Scheduler. Invalid params {params} at frame {current_frame}")
 
-            show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Scheduler-Nodes#cr-simple-text-scheduler"
+            show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Scheduler-Nodes#cr-simple-text-scheduler"
 
             return(text_out, show_help, )
 
@@ -364,10 +364,10 @@ class CR_LoadScheduledModels:
     RETURN_TYPES = ("MODEL", "CLIP", "VAE", "STRING", )
     RETURN_NAMES = ("MODEL", "CLIP", "VAE", "show_help", )
     FUNCTION = "schedule"
-    CATEGORY = icons.get("Comfyroll/Animation/Schedulers")
+    CATEGORY = icons.get("comfyrock/Animation/Schedulers")
 
     def schedule(self, mode, current_frame, schedule_alias, default_model, schedule_format, model_list=None, schedule=None):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Scheduler-Nodes#cr-load-scheduled-models"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Scheduler-Nodes#cr-load-scheduled-models"
 
         #model_name = ""
     
@@ -440,10 +440,10 @@ class CR_LoadScheduledLoRAs:
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", )
     RETURN_NAMES = ("MODEL", "CLIP", "show_help", )
     FUNCTION = "schedule"
-    CATEGORY = icons.get("Comfyroll/Animation/Schedulers")
+    CATEGORY = icons.get("comfyrock/Animation/Schedulers")
 
     def schedule(self, mode, model, clip, current_frame, schedule_alias, default_lora, strength_model, strength_clip, schedule_format, lora_list=None, schedule=None):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Scheduler-Nodes#cr-load-scheduled-loras"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Scheduler-Nodes#cr-load-scheduled-loras"
         #lora_name = ""
 
         # Off mode

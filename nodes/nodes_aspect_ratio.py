@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -67,7 +67,7 @@ class CR_AspectRatioSD15:
     RETURN_TYPES = ("INT", "INT", "FLOAT", "INT", "LATENT", "STRING", )
     RETURN_NAMES = ("width", "height", "upscale_factor", "batch_size", "empty_latent", "show_help", )
     FUNCTION = "Aspect_Ratio"
-    CATEGORY = icons.get("Comfyroll/Aspect Ratio")
+    CATEGORY = icons.get("comfyrock/Aspect Ratio")
 
     def Aspect_Ratio(self, width, height, aspect_ratio, swap_dimensions, upscale_factor, batch_size):
         if aspect_ratio == "2:3 portrait 512x768":
@@ -96,7 +96,7 @@ class CR_AspectRatioSD15:
            
         latent = torch.zeros([batch_size, 4, height // 8, width // 8])
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Aspect-Ratio-Nodes#cr-sd15-aspect-ratio"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Aspect-Ratio-Nodes#cr-sd15-aspect-ratio"
            
         return(width, height, upscale_factor, batch_size, {"samples":latent}, show_help, )   
 
@@ -132,7 +132,7 @@ class CR_SDXLAspectRatio:
     RETURN_TYPES = ("INT", "INT", "FLOAT", "INT", "LATENT", "STRING", )
     RETURN_NAMES = ("width", "height", "upscale_factor", "batch_size", "empty_latent", "show_help", )
     FUNCTION = "Aspect_Ratio"
-    CATEGORY = icons.get("Comfyroll/Aspect Ratio")
+    CATEGORY = icons.get("comfyrock/Aspect Ratio")
 
     def Aspect_Ratio(self, width, height, aspect_ratio, swap_dimensions, upscale_factor, batch_size):
         if aspect_ratio == "1:1 square 1024x1024":
@@ -159,7 +159,7 @@ class CR_SDXLAspectRatio:
              
         latent = torch.zeros([batch_size, 4, height // 8, width // 8])
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Aspect-Ratio-Nodes#cr-sdxl-aspect-ratio"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Aspect-Ratio-Nodes#cr-sdxl-aspect-ratio"
            
         return(width, height, upscale_factor, batch_size, {"samples":latent}, show_help, )  
 
@@ -204,7 +204,7 @@ class CR_AspectRatio:
     RETURN_TYPES = ("INT", "INT", "FLOAT", "FLOAT", "INT", "LATENT", "STRING", )
     RETURN_NAMES = ("width", "height", "upscale_factor", "prescale_factor", "batch_size", "empty_latent", "show_help", )
     FUNCTION = "Aspect_Ratio"
-    CATEGORY = icons.get("Comfyroll/Aspect Ratio")
+    CATEGORY = icons.get("comfyrock/Aspect Ratio")
 
     def Aspect_Ratio(self, width, height, aspect_ratio, swap_dimensions, upscale_factor, prescale_factor, batch_size):
         
@@ -255,7 +255,7 @@ class CR_AspectRatio:
         
         latent = torch.zeros([batch_size, 4, height // 8, width // 8])
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Aspect-Ratio-Nodes#cr-aspect-ratio"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Aspect-Ratio-Nodes#cr-aspect-ratio"
            
         return(width, height, upscale_factor, prescale_factor, batch_size, {"samples":latent}, show_help, )    
 
@@ -297,7 +297,7 @@ class CR_AspectRatioBanners:
     RETURN_TYPES = ("INT", "INT", "FLOAT", "FLOAT", "INT", "LATENT", "STRING", )
     RETURN_NAMES = ("width", "height", "upscale_factor", "prescale_factor", "batch_size", "empty_latent", "show_help", )
     FUNCTION = "Aspect_Ratio"
-    CATEGORY = icons.get("Comfyroll/Aspect Ratio")
+    CATEGORY = icons.get("comfyrock/Aspect Ratio")
 
     def Aspect_Ratio(self, width, height, aspect_ratio, swap_dimensions, upscale_factor, prescale_factor, batch_size):
         
@@ -339,7 +339,7 @@ class CR_AspectRatioBanners:
         
         latent = torch.zeros([batch_size, 4, height // 8, width // 8])
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Aspect-Ratio-Nodes#cr-aspect-ratio-banners"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Aspect-Ratio-Nodes#cr-aspect-ratio-banners"
            
         return(width, height, upscale_factor, prescale_factor, batch_size, {"samples":latent}, show_help, ) 
 
@@ -381,7 +381,7 @@ class CR_AspectRatioSocialMedia:
     RETURN_TYPES = ("INT", "INT", "FLOAT", "FLOAT", "INT", "LATENT", "STRING", )
     RETURN_NAMES = ("width", "height", "upscale_factor", "prescale_factor", "batch_size", "empty_latent", "show_help", )
     FUNCTION = "Aspect_Ratio"
-    CATEGORY = icons.get("Comfyroll/Aspect Ratio")
+    CATEGORY = icons.get("comfyrock/Aspect Ratio")
 
     def Aspect_Ratio(self, width, height, aspect_ratio, swap_dimensions, upscale_factor, prescale_factor, batch_size):
         
@@ -427,7 +427,7 @@ class CR_AspectRatioSocialMedia:
         
         latent = torch.zeros([batch_size, 4, height // 8, width // 8])
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Aspect-Ratio-Nodes#cr-aspect-ratio-scial-media"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Aspect-Ratio-Nodes#cr-aspect-ratio-scial-media"
            
         return(width, height, upscale_factor, prescale_factor, batch_size, {"samples":latent}, show_help, ) 
  
@@ -453,7 +453,7 @@ class CR_AspectRatioForPrint:
     RETURN_TYPES = ("INT", "INT", "FLOAT", "FLOAT", "INT", "LATENT", "STRING", )
     RETURN_NAMES = ("width", "height", "upscale_factor", "prescale_factor", "batch_size", "empty_latent", "show_help", )
     FUNCTION = "Aspect_Ratio"
-    CATEGORY = icons.get("Comfyroll/Aspect Ratio")
+    CATEGORY = icons.get("comfyrock/Aspect Ratio")
 
     def Aspect_Ratio(self, width, height, aspect_ratio, swap_dimensions, upscale_factor, prescale_factor, batch_size):
 
@@ -471,7 +471,7 @@ class CR_AspectRatioForPrint:
         
         latent = torch.zeros([batch_size, 4, height // 8, width // 8])
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Aspect-Ratio-Nodes#cr-aspect-ratio-scial-media"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Aspect-Ratio-Nodes#cr-aspect-ratio-scial-media"
            
         return(width, height, upscale_factor, prescale_factor, batch_size, {"samples":latent}, show_help, ) 
   

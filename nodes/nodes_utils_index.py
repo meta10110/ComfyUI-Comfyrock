@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -18,10 +18,10 @@ class CR_Trigger:
     RETURN_TYPES = ("INT", "BOOLEAN", "STRING", )
     RETURN_NAMES = ("index", "trigger", "show_help", )
     FUNCTION = "trigger"
-    CATEGORY = icons.get("Comfyroll/Utils/Index")
+    CATEGORY = icons.get("comfyrock/Utils/Index")
 
     def trigger(self, index, trigger_value):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Index-Nodes#cr-trigger"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Index-Nodes#cr-trigger"
         return (index, index == trigger_value, show_help, )
 
 #---------------------------------------------------------------------------------------------------------------------#
@@ -37,14 +37,14 @@ class CR_Index:
     RETURN_TYPES = ("INT", "STRING", )
     RETURN_NAMES = ("INT", "show_help", )
     FUNCTION = "index"
-    CATEGORY = icons.get("Comfyroll/Utils/Index")
+    CATEGORY = icons.get("comfyrock/Utils/Index")
 
     def index(self, index, print_to_console):
     
         if print_to_console == "Yes":
             print(f"[Info] CR Index:{index}")
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Index-Nodes#cr-index"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Index-Nodes#cr-index"
         return (index, show_help, )
 
 #---------------------------------------------------------------------------------------------------------------------#
@@ -61,11 +61,11 @@ class CR_IncrementIndex:
     RETURN_TYPES = ("INT", "INT", "STRING", )
     RETURN_NAMES = ("index", "interval", "show_help", )
     FUNCTION = "increment"
-    CATEGORY = icons.get("Comfyroll/Utils/Index")
+    CATEGORY = icons.get("comfyrock/Utils/Index")
     
     def increment(self, index, interval):
         index+=interval
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Index-Nodes#cr-index-increment"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Index-Nodes#cr-index-increment"
         return (index, show_help, )
 
 #---------------------------------------------------------------------------------------------------------------------#   
@@ -83,11 +83,11 @@ class CR_MultiplyIndex:
     RETURN_TYPES = ("INT", "INT", "STRING", )
     RETURN_NAMES = ("index", "factor", "show_help", )
     FUNCTION = "multiply"
-    CATEGORY = icons.get("Comfyroll/Utils/Index")
+    CATEGORY = icons.get("comfyrock/Utils/Index")
     
     def multiply(self, index, factor):
         index = index * factor
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Index-Nodes#cr-index-multiply"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Index-Nodes#cr-index-multiply"
         return (index, factor, show_help, ) 
 
 #---------------------------------------------------------------------------------------------------------------------#   
@@ -105,11 +105,11 @@ class CR_IndexReset:
     RETURN_TYPES = ("INT", "INT", "STRING", )
     RETURN_NAMES = ("index", "reset_to", "show_help", )
     FUNCTION = "reset"
-    CATEGORY = icons.get("Comfyroll/Utils/Index")
+    CATEGORY = icons.get("comfyrock/Utils/Index")
     
     def reset(self, index, reset_to):
         index = reset_to
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Index-Nodes#cr-index-reset"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Index-Nodes#cr-index-reset"
         return (index, reset_to, show_help, )   
      
 #---------------------------------------------------------------------------------------------------------------------#

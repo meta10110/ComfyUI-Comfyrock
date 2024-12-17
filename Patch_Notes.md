@@ -1,4 +1,4 @@
-# 🧩 Comfyroll Studio - Patch Notes
+# 🧩 comfyrock Studio - Patch Notes
 
 ## v1.76 Jan 24, 2024
 - added CR VAE Decode
@@ -235,6 +235,6 @@
 
 ## PR37 Nov 19, 2023
 - added CR Simple Text Watermark
-- merged CR Animation Nodes into Comfyroll custom Nodes
+- merged CR Animation Nodes into comfyrock custom Nodes
 - added reduce_opacity function in graphics_functions
 

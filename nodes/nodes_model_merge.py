@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -41,7 +41,7 @@ class CR_ModelMergeStack:
     RETURN_TYPES = ("MODEL_STACK", "STRING", )
     RETURN_NAMES = ("MODEL_STACK", "show_help", )
     FUNCTION = "list_checkpoints"
-    CATEGORY = icons.get("Comfyroll/Model Merge")
+    CATEGORY = icons.get("comfyrock/Model Merge")
 
     def list_checkpoints(self, switch_1, ckpt_name1, model_ratio1, clip_ratio1, switch_2, ckpt_name2, model_ratio2, clip_ratio2, switch_3, ckpt_name3, model_ratio3, clip_ratio3, model_stack=None):
     
@@ -60,7 +60,7 @@ class CR_ModelMergeStack:
         if ckpt_name3 != "None" and  switch_3 == "On":
             model_list.extend([(ckpt_name3, model_ratio3, clip_ratio3)]),
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Model-Merge-Nodes#cr-model-stack"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Model-Merge-Nodes#cr-model-stack"
         
         return (model_list, show_help, )
 
@@ -82,7 +82,7 @@ class CR_ApplyModelMerge:
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", "STRING", )
     RETURN_NAMES = ("MODEL", "CLIP", "model_mix_info", "show_help", )
     FUNCTION = "merge"
-    CATEGORY = icons.get("Comfyroll/Model Merge")
+    CATEGORY = icons.get("comfyrock/Model Merge")
 
     def merge(self, model_stack, merge_method, normalise_ratios, weight_factor):
     
@@ -158,7 +158,7 @@ class CR_ApplyModelMerge:
             # Update model info                
                 model_mix_info = model_mix_info + "\nModel Name: " + model_name + "\nModel Ratio: " + str(model_ratio) + "\nCLIP Ratio: " + str(clip_ratio) + "\n"
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Model-Merge-Nodes#cr-apply-model-merge"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Model-Merge-Nodes#cr-apply-model-merge"
                 
         return (model1, clip1, model_mix_info, show_help, )
 

@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -74,11 +74,11 @@ class CR_TextList:
     RETURN_NAMES = ("STRING", "show_help", )
     OUTPUT_IS_LIST = (True, False)
     FUNCTION = "make_list"
-    CATEGORY = icons.get("Comfyroll/List")
+    CATEGORY = icons.get("comfyrock/List")
 
     def make_list(self, multiline_text, start_index, max_rows):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-text-list"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-text-list"
 
         lines = multiline_text.split('\n')
 
@@ -111,11 +111,11 @@ class CR_PromptList:
     RETURN_NAMES = ("prompt", "body_text", "show_help", )
     OUTPUT_IS_LIST = (True, True, False)
     FUNCTION = "make_list"
-    CATEGORY = icons.get("Comfyroll/List")
+    CATEGORY = icons.get("comfyrock/List")
 
     def make_list(self, multiline_text, prepend_text="", append_text="", start_index=0, max_rows=9999):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-prompt-list"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-prompt-list"
 
         lines = multiline_text.split('\n')
 
@@ -153,11 +153,11 @@ class CR_LoadImageList:
     RETURN_NAMES = ("IMAGE", "show_help", )
     OUTPUT_IS_LIST = (True, False)
     FUNCTION = "make_list"
-    CATEGORY = icons.get("Comfyroll/List/IO")
+    CATEGORY = icons.get("comfyrock/List/IO")
 
     def make_list(self, start_index, max_images, input_folder, input_path=None):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-image-list"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-image-list"
 
         # Set the input path
         if input_path != '' and input_path is not None:
@@ -217,10 +217,10 @@ class CR_LoadImageListPlus:
     RETURN_NAMES = ("IMAGE", "MASK", "index", "filename", "resolution", "list_length", "show_help", )
     OUTPUT_IS_LIST = (True, True, True, True, True, False, False)
     FUNCTION = "make_list"
-    CATEGORY = icons.get("Comfyroll/List/IO")
+    CATEGORY = icons.get("comfyrock/List/IO")
 
     def make_list(self, start_index, max_images, input_folder, input_path=None, vae=None):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-image-list-plus"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-image-list-plus"
 
         # Set the input path
         if input_path != '' and input_path is not None:
@@ -302,11 +302,11 @@ class CR_LoadGIFAsList:
     RETURN_NAMES = ("IMAGE", "MASK", "show_help", )
     OUTPUT_IS_LIST = (True, True, False)
     FUNCTION = "load_gif"
-    CATEGORY = icons.get("Comfyroll/List/IO")
+    CATEGORY = icons.get("comfyrock/List/IO")
  
     def load_gif(self, input_folder, gif_filename, start_frame, max_frames, input_path=None):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-load-gif-images"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-load-gif-images"
       
         # Set the input path
         if input_path != '' and input_path is not None:
@@ -363,10 +363,10 @@ class CR_FontFileList:
     @classmethod
     def INPUT_TYPES(s):
     
-        comfyroll_font_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "fonts")       
-        comfyroll_file_list = [f for f in os.listdir(comfyroll_font_dir) if os.path.isfile(os.path.join(comfyroll_font_dir, f)) and f.lower().endswith(".ttf")]
+        comfyrock_font_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "fonts")       
+        comfyrock_file_list = [f for f in os.listdir(comfyrock_font_dir) if os.path.isfile(os.path.join(comfyrock_font_dir, f)) and f.lower().endswith(".ttf")]
 
-        sources = ["system", "Comfyroll", "from folder"]
+        sources = ["system", "comfyrock", "from folder"]
         
         return {"required": {"source_folder": (sources,),
                              "start_index": ("INT", {"default": 0, "min": 0, "max": 9999}),
@@ -380,19 +380,19 @@ class CR_FontFileList:
     RETURN_NAMES = ("LIST", "show_help", )
     OUTPUT_IS_LIST = (True, False)
     FUNCTION = "make_list"
-    CATEGORY = icons.get("Comfyroll/List/IO")
+    CATEGORY = icons.get("comfyrock/List/IO")
 
     def make_list(self, source_folder, start_index, max_rows, folder_path="C:\Windows\Fonts"):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-font-file-list"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-font-file-list"
 
         if source_folder == "system":
             system_root = os.environ.get('SystemRoot')
             system_font_dir = os.path.join(system_root, 'Fonts')   
             file_list = [f for f in os.listdir(system_font_dir) if os.path.isfile(os.path.join(system_font_dir, f)) and f.lower().endswith(".ttf")]
-        elif source_folder == "Comfyroll":
-            comfyroll_font_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "fonts")       
-            file_list = [f for f in os.listdir(comfyroll_font_dir) if os.path.isfile(os.path.join(comfyroll_font_dir, f)) and f.lower().endswith(".ttf")]
+        elif source_folder == "comfyrock":
+            comfyrock_font_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "fonts")       
+            file_list = [f for f in os.listdir(comfyrock_font_dir) if os.path.isfile(os.path.join(comfyrock_font_dir, f)) and f.lower().endswith(".ttf")]
         elif source_folder == "from folder":
             if folder_path != '' and folder_path is not None:
                 if not os.path.exists(folder_path):
@@ -441,11 +441,11 @@ class CR_FloatRangeList:
     RETURN_NAMES = ("FLOAT", "show_help", )    
     OUTPUT_IS_LIST = (True, False)    
     FUNCTION = 'make_range'
-    CATEGORY = icons.get("Comfyroll/List")
+    CATEGORY = icons.get("comfyrock/List")
 
     def make_range(self, start, end, step, max_values_per_loop, operation, decimal_places, ignore_first_value, loops, ping_pong):
             
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-float-range-list"      
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-float-range-list"      
         
         range_values = list()
         
@@ -503,11 +503,11 @@ class CR_IntegerRangeList:
     RETURN_NAMES = ("INT", "show_help", )    
     OUTPUT_IS_LIST = (True, False)    
     FUNCTION = 'make_range'
-    CATEGORY = icons.get("Comfyroll/List")
+    CATEGORY = icons.get("comfyrock/List")
 
     def make_range(self, start, end, step, loops, ping_pong):
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-list-schedule"      
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-list-schedule"      
     
         range_values = list()
         for i in range(loops):
@@ -540,11 +540,11 @@ class CR_LoadTextList:
     RETURN_NAMES = ("STRING", "show_help", ) 
     OUTPUT_IS_LIST = (True, False)    
     FUNCTION = 'load_list'
-    CATEGORY = icons.get("Comfyroll/List")
+    CATEGORY = icons.get("comfyrock/List")
 
     def load_list(self, input_file_path, file_name, file_extension):
            
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-load-value-list"      
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-load-value-list"      
 
         filepath = input_file_path + "\\" + file_name + "." + file_extension
         print(f"CR Load Values: Loading {filepath}")
@@ -580,11 +580,11 @@ class CR_IntertwineLists:
     RETURN_NAMES = ("STRING", "show_help", )  
     OUTPUT_IS_LIST = (True, False)      
     FUNCTION = 'make_list'
-    CATEGORY = icons.get("Comfyroll/List/Utils")
+    CATEGORY = icons.get("comfyrock/List/Utils")
 
     def make_list(self, list1, list2):
            
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-intertwine-lists"      
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-intertwine-lists"      
 
         # Ensure both lists have the same length
         min_length = min(len(list1), len(list2))
@@ -611,11 +611,11 @@ class CR_BinaryToBitList:
     RETURN_NAMES = ("STRING", "show_help", )  
     OUTPUT_IS_LIST = (True, False)    
     FUNCTION = 'make_list'
-    CATEGORY = icons.get("Comfyroll/List")
+    CATEGORY = icons.get("comfyrock/List")
 
     def make_list(self, bit_string):
            
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-binary-to-list" 
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-binary-to-list" 
         
         list_out = [str(bit) for bit in bit_string]
 
@@ -633,11 +633,11 @@ class CR_MakeBatchFromImageList:
     RETURN_NAMES = ("image_batch", "show_help", ) 
     INPUT_IS_LIST = True
     FUNCTION = "make_batch"
-    CATEGORY = icons.get("Comfyroll/List/Utils")
+    CATEGORY = icons.get("comfyrock/List/Utils")
    
     def make_batch(self, image_list):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-binary-to-list" 
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-binary-to-list" 
     
         if len(image_list) <= 1:
             return (image_list,)
@@ -659,13 +659,13 @@ class CR_TextListToString:
     RETURN_NAMES = ("STRING", "show_help", )
     INPUT_IS_LIST = True    
     FUNCTION = "joinlist"
-    CATEGORY = icons.get("Comfyroll/List/Utils")
+    CATEGORY = icons.get("comfyrock/List/Utils")
 
     def joinlist(self, text_list):
     
         string_out = "\n".join(text_list)
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-text-list-to-string"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-text-list-to-string"
 
         return (string_out, show_help, )
  
@@ -683,7 +683,7 @@ class CR_SimpleList:
     RETURN_NAMES = ("LIST", "show_help", ) 
     OUTPUT_IS_LIST = (True, False)
     FUNCTION = "cross_join"
-    CATEGORY = icons.get("Comfyroll/List") 
+    CATEGORY = icons.get("comfyrock/List") 
     
     def cross_join(self, list_values):
 
@@ -691,7 +691,7 @@ class CR_SimpleList:
 
         list_out = [i.strip() for i in lines if i.strip()]
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-simple-list"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-simple-list"
 
         return (list_out, show_help, )
 
@@ -710,11 +710,11 @@ class CR_XYProduct:
     RETURN_NAMES = ("x_values", "y_values", "show_help", ) 
     OUTPUT_IS_LIST = (True, True, False)
     FUNCTION = "cross_join"
-    CATEGORY = icons.get("Comfyroll/List/Utils") 
+    CATEGORY = icons.get("comfyrock/List/Utils") 
     
     def cross_join(self, text_x, text_y):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-xy-product"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-xy-product"
         
         list1 = text_x.strip().split('\n')
         list2 = text_y.strip().split('\n')
@@ -739,11 +739,11 @@ class CR_Repeater:
     RETURN_NAMES = ("list", "show_help", ) 
     OUTPUT_IS_LIST = (True, False)
     FUNCTION = "repeat_list_items"
-    CATEGORY = icons.get("Comfyroll/List/Utils") 
+    CATEGORY = icons.get("comfyrock/List/Utils") 
         
     def repeat_list_items(self, input_data, repeats):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-repeater"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-repeater"
         
         new_list = []
         
@@ -771,11 +771,11 @@ class CR_TextCycler:
     RETURN_NAMES = ("STRING", "show_text", )
     OUTPUT_IS_LIST = (True, False)
     FUNCTION = "cycle"
-    CATEGORY = icons.get("Comfyroll/List")    
+    CATEGORY = icons.get("comfyrock/List")    
 
     def cycle(self, text, repeats, loops=1):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-text-cycler"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-text-cycler"
     
         lines = text.split('\n')
         list_out = []
@@ -803,11 +803,11 @@ class CR_ValueCycler:
     RETURN_NAMES = ("FLOAT", "INT", "show_text", )
     OUTPUT_IS_LIST = (True, True, False)
     FUNCTION = "cycle"
-    CATEGORY = icons.get("Comfyroll/List")    
+    CATEGORY = icons.get("comfyrock/List")    
 
     def cycle(self, values, repeats, loops=1):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-value-cycler"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-value-cycler"
     
         lines = values.split('\n')
         float_list_out = []

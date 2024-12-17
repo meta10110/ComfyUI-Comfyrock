@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -38,10 +38,10 @@ class CR_LoraLoader:
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", )
     RETURN_NAMES = ("MODEL", "CLIP", "show_help", )
     FUNCTION = "load_lora"
-    CATEGORY = icons.get("Comfyroll/LoRA")
+    CATEGORY = icons.get("comfyrock/LoRA")
 
     def load_lora(self, model, clip, switch, lora_name, strength_model, strength_clip):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/LoRA-Nodes#cr-load-lora"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/LoRA-Nodes#cr-load-lora"
         if strength_model == 0 and strength_clip == 0:
             return (model, clip, show_help, )
 
@@ -94,7 +94,7 @@ class CR_LoRAStack:
     RETURN_TYPES = ("LORA_STACK", "STRING", )
     RETURN_NAMES = ("LORA_STACK", "show_help", )
     FUNCTION = "lora_stacker"
-    CATEGORY = icons.get("Comfyroll/LoRA")
+    CATEGORY = icons.get("comfyrock/LoRA")
 
     def lora_stacker(self, lora_name_1, model_weight_1, clip_weight_1, switch_1, lora_name_2, model_weight_2, clip_weight_2, switch_2, lora_name_3, model_weight_3, clip_weight_3, switch_3, lora_stack=None):
 
@@ -113,7 +113,7 @@ class CR_LoRAStack:
         if lora_name_3 != "None" and  switch_3 == "On":
             lora_list.extend([(lora_name_3, model_weight_3, clip_weight_3)]),
            
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/LoRA-Nodes#cr-lora-stack"           
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/LoRA-Nodes#cr-lora-stack"           
 
         return (lora_list, show_help, )
 
@@ -132,10 +132,10 @@ class CR_ApplyLoRAStack:
     RETURN_TYPES = ("MODEL", "CLIP", "STRING", )
     RETURN_NAMES = ("MODEL", "CLIP", "show_help", )
     FUNCTION = "apply_lora_stack"
-    CATEGORY = icons.get("Comfyroll/LoRA")
+    CATEGORY = icons.get("comfyrock/LoRA")
 
     def apply_lora_stack(self, model, clip, lora_stack=None,):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/LoRA-Nodes#cr-apply-lora-stack"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/LoRA-Nodes#cr-apply-lora-stack"
 
         # Initialise the list
         lora_params = list()
@@ -186,7 +186,7 @@ class CR_RandomWeightLoRA:
 
     RETURN_TYPES = ("LORA_STACK",)
     FUNCTION = "random_weight_lora"
-    CATEGORY = icons.get("Comfyroll/LoRA")
+    CATEGORY = icons.get("comfyrock/LoRA")
 
     LastWeightMap = {}
     StridesMap = {}
@@ -282,7 +282,7 @@ class CR_RandomLoRAStack:
 
     RETURN_TYPES = ("LORA_STACK",)
     FUNCTION = "random_lora_stacker"
-    CATEGORY = icons.get("Comfyroll/LoRA")
+    CATEGORY = icons.get("comfyrock/LoRA")
 
     UsedLorasMap = {}
     StridesMap = {}

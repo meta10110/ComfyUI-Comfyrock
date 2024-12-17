@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -30,11 +30,11 @@ class CR_ApplyControlNet:
     RETURN_TYPES = ("CONDITIONING", "STRING", )
     RETURN_NAMES = ("CONDITIONING", "show_help", )
     FUNCTION = "apply_controlnet"
-    CATEGORY = icons.get("Comfyroll/ControlNet")
+    CATEGORY = icons.get("comfyrock/ControlNet")
 
     def apply_controlnet(self, conditioning, control_net, image, switch, strength):
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/ControlNet-Nodes#cr-apply-controlnet"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/ControlNet-Nodes#cr-apply-controlnet"
         
         if strength == 0 or switch == "Off":
             return (conditioning, show_help, )
@@ -91,7 +91,7 @@ class CR_ControlNetStack:
     RETURN_TYPES = ("CONTROL_NET_STACK", "STRING", )
     RETURN_NAMES = ("CONTROLNET_STACK", "show_help", )
     FUNCTION = "controlnet_stacker"
-    CATEGORY = icons.get("Comfyroll/ControlNet")
+    CATEGORY = icons.get("comfyrock/ControlNet")
 
     def controlnet_stacker(self, switch_1, controlnet_1, controlnet_strength_1, start_percent_1, end_percent_1,
                            switch_2, controlnet_2, controlnet_strength_2, start_percent_2, end_percent_2,
@@ -119,7 +119,7 @@ class CR_ControlNetStack:
             controlnet_3 = comfy.controlnet.load_controlnet(controlnet_path)
             controlnet_list.extend([(controlnet_3, image_3, controlnet_strength_3, start_percent_3, end_percent_3)]),
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/ControlNet-Nodes#cr-multi-controlnet-stack"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/ControlNet-Nodes#cr-multi-controlnet-stack"
 
         return (controlnet_list, show_help, )
         
@@ -139,10 +139,10 @@ class CR_ApplyControlNetStack:
     RETURN_TYPES = ("CONDITIONING", "CONDITIONING", "STRING", )
     RETURN_NAMES = ("base_pos", "base_neg", "show_help", )
     FUNCTION = "apply_controlnet_stack"
-    CATEGORY = icons.get("Comfyroll/ControlNet")
+    CATEGORY = icons.get("comfyrock/ControlNet")
 
     def apply_controlnet_stack(self, base_positive, base_negative, switch, controlnet_stack=None,):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/ControlNet-Nodes#cr-apply-multi-controlnet-stack"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/ControlNet-Nodes#cr-apply-multi-controlnet-stack"
 
         if switch == "Off":
             return (base_positive, base_negative, show_help, )

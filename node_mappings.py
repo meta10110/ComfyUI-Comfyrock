@@ -11,7 +11,7 @@ try:
     from .nodes.nodes_xygrid import *
     from .nodes.nodes_legacy import *
 except ImportError:
-    print("\033[34mComfyroll Studio: \033[92mFailed to load Essential nodes\033[0m")
+    print("\033[34mcomfyrock Studio: \033[92mFailed to load Essential nodes\033[0m")
 
 try:
     from .nodes.nodes_graphics_matplot import *
@@ -21,7 +21,7 @@ try:
     from .nodes.nodes_graphics_template import *
     from .nodes.nodes_graphics_pattern import *
 except ImportError:
-    print("\033[34mComfyroll Studio: \033[92mFailed to load Graphics nodes\033[0m")
+    print("\033[34mcomfyrock Studio: \033[92mFailed to load Graphics nodes\033[0m")
 
 try:
     from .nodes.nodes_animation_interpolation import *
@@ -33,7 +33,7 @@ try:
     from .nodes.nodes_animation_utils import *
     from .nodes.nodes_animation_cyclers import *
 except ImportError:
-    print("\033[34mComfyroll Studio: \033[92mFailed to load Animation nodes\033[0m")
+    print("\033[34mcomfyrock Studio: \033[92mFailed to load Animation nodes\033[0m")
     
 try:
     from .nodes.nodes_utils_logic import *
@@ -43,7 +43,7 @@ try:
     from .nodes.nodes_utils_text import *
     from .nodes.nodes_utils_other import *
 except ImportError:
-    print("\033[34mComfyroll Studio: \033[92mFailed to load Utility nodes\033[0m")
+    print("\033[34mcomfyrock Studio: \033[92mFailed to load Utility nodes\033[0m")
 
 NODE_CLASS_MAPPINGS = { 
     ### Core Nodes
@@ -241,7 +241,7 @@ NODE_CLASS_MAPPINGS = {
     "CR Combine Schedules": CR_CombineSchedules,  
     "CR Output Schedule To File": CR_OutputScheduleToFile,
     "CR Load Schedule From File": CR_LoadScheduleFromFile, 
-    "CR Schedule Input Switch": Comfyroll_ScheduleInputSwitch,
+    "CR Schedule Input Switch": comfyrock_ScheduleInputSwitch,
     "CR Bit Schedule": CR_BitSchedule,    
     # Schedulers
     "CR Simple Value Scheduler": CR_SimpleValueScheduler,

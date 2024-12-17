@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -24,7 +24,7 @@ class CR_StringToNumber:
     RETURN_TYPES = ("INT", "FLOAT", "STRING", )
     RETURN_NAMES = ("INT", "FLOAT", "show_help", )
     FUNCTION = "convert"
-    CATEGORY = icons.get("Comfyroll/Utils/Conversion")
+    CATEGORY = icons.get("comfyrock/Utils/Conversion")
 
     def convert(self, text, round_integer):
 
@@ -53,7 +53,7 @@ class CR_StringToNumber:
         else:
             int_out = round(float_out)
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Conversion-Nodes#cr-string-to-number"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Conversion-Nodes#cr-string-to-number"
         return (int_out, float_out, show_help,)
         
 #---------------------------------------------------------------------------------------------------------------------#  
@@ -71,7 +71,7 @@ class CR_StringToCombo:
     RETURN_TYPES = (any, "STRING", )
     RETURN_NAMES = ("any", "show_help", )
     FUNCTION = "convert"
-    CATEGORY = icons.get("Comfyroll/Utils/Conversion")
+    CATEGORY = icons.get("comfyrock/Utils/Conversion")
 
     def convert(self, text):
     
@@ -82,7 +82,7 @@ class CR_StringToCombo:
             text_list = values[0]
             print(text_list)
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Conversion-Nodes#cr-string-to-combo"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Conversion-Nodes#cr-string-to-combo"
 
         return (text_list, show_help, )
 
@@ -101,11 +101,11 @@ class CR_StringToBoolean:
     RETURN_TYPES = ("BOOLEAN", "STRING", )
     RETURN_NAMES = ("BOOLEAN", "show_help", )
     FUNCTION = "convert"
-    CATEGORY = icons.get("Comfyroll/Utils/Conversion")
+    CATEGORY = icons.get("comfyrock/Utils/Conversion")
 
     def convert(self, text):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Conversion-Nodes#cr-string-to-boolean"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Conversion-Nodes#cr-string-to-boolean"
 
         if text == "True" or text == "true":
             boolean_out = True
@@ -128,10 +128,10 @@ class CR_IntegerToString:
     RETURN_TYPES = ("STRING","STRING", )
     RETURN_NAMES = ("STRING","show_help", )
     FUNCTION = 'convert'
-    CATEGORY = icons.get("Comfyroll/Utils/Conversion")
+    CATEGORY = icons.get("comfyrock/Utils/Conversion")
 
     def convert(self, int_):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Conversion-Nodes#cr-integer-to-string"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Conversion-Nodes#cr-integer-to-string"
         return (f'{int_}', show_help, )
 
 #---------------------------------------------------------------------------------------------------------------------------------------------------#
@@ -147,10 +147,10 @@ class CR_FloatToString:
     RETURN_TYPES = ('STRING', "STRING", )
     RETURN_NAMES = ('STRING', "show_help", )
     FUNCTION = 'convert'
-    CATEGORY = icons.get("Comfyroll/Utils/Conversion")
+    CATEGORY = icons.get("comfyrock/Utils/Conversion")
 
     def convert(self, float_):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Conversion-Nodes#cr-float-to-string"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Conversion-Nodes#cr-float-to-string"
         return (f'{float_}', show_help, )
 
 #---------------------------------------------------------------------------------------------------------------------
@@ -166,10 +166,10 @@ class CR_FloatToInteger:
     RETURN_TYPES = ("INT", "STRING", )
     RETURN_NAMES = ("INT", "show_help", )
     FUNCTION = "convert"
-    CATEGORY = icons.get("Comfyroll/Utils/Conversion")
+    CATEGORY = icons.get("comfyrock/Utils/Conversion")
 
     def convert(self, _float):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Conversion-Nodes#cr-float-to-integer"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Conversion-Nodes#cr-float-to-integer"
         return (int(_float), show_help, )
         
 #---------------------------------------------------------------------------------------------------------------------#

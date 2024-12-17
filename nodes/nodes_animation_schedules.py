@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -31,7 +31,7 @@ class CR_SimpleSchedule:
     RETURN_TYPES = ("SCHEDULE", "STRING", )
     RETURN_NAMES = ("SCHEDULE", "show_help", )
     FUNCTION = "send_schedule"
-    CATEGORY = icons.get("Comfyroll/Animation/Schedule")
+    CATEGORY = icons.get("comfyrock/Animation/Schedule")
 
     def send_schedule(self, schedule, schedule_type, schedule_alias, schedule_format):
 
@@ -49,7 +49,7 @@ class CR_SimpleSchedule:
                 schedule_lines.extend([(schedule_alias, line)])
         #print(f"[Debug] CR Simple Schedule: {schedule_lines}")
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Schedule-Nodes#cr-simple-schedule"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Schedule-Nodes#cr-simple-schedule"
 
         return (schedule_lines, show_help, )
 
@@ -71,7 +71,7 @@ class CR_CombineSchedules:
     RETURN_TYPES = ("SCHEDULE", "STRING", )
     RETURN_NAMES = ("SCHEDULE", "show_text", )
     FUNCTION = "combine"
-    CATEGORY = icons.get("Comfyroll/Animation/Schedule")
+    CATEGORY = icons.get("comfyrock/Animation/Schedule")
 
     def combine(self, schedule_1=None, schedule_2=None, schedule_3=None, schedule_4=None):
 
@@ -127,7 +127,7 @@ class CR_CentralSchedule:
     RETURN_TYPES = ("SCHEDULE", "STRING", )
     RETURN_NAMES = ("SCHEDULE", "show_text", )
     FUNCTION = "build_schedule"
-    CATEGORY = icons.get("Comfyroll/Animation/Schedule")
+    CATEGORY = icons.get("comfyrock/Animation/Schedule")
 
     def build_schedule(self, schedule_1, schedule_type1, schedule_alias1, schedule_2, schedule_type2, schedule_alias2, schedule_3, schedule_type3, schedule_alias3, schedule_format, schedule=None):
     
@@ -168,7 +168,7 @@ class CR_CentralSchedule:
         return (schedules, show_text, )    
 
 #---------------------------------------------------------------------------------------------------------------------#
-class Comfyroll_ScheduleInputSwitch:
+class comfyrock_ScheduleInputSwitch:
     def __init__(self):
         pass
 
@@ -187,10 +187,10 @@ class Comfyroll_ScheduleInputSwitch:
     OUTPUT_NODE = True
     FUNCTION = "switch"
 
-    CATEGORY = icons.get("Comfyroll/Animation/Schedule")
+    CATEGORY = icons.get("comfyrock/Animation/Schedule")
 
     def switch(self, Input, schedule1, schedule2):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Schedule-Nodes#cr-schedule-input-switch"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Schedule-Nodes#cr-schedule-input-switch"
         if Input == 1:
             return (schedule1, show_help, )
         else:
@@ -212,7 +212,7 @@ class CR_OutputScheduleToFile:
     RETURN_TYPES = ()
     OUTPUT_NODE = True
     FUNCTION = "csvoutput"
-    CATEGORY = icons.get("Comfyroll/Animation/Schedule") 
+    CATEGORY = icons.get("comfyrock/Animation/Schedule") 
     
     def csvoutput(self, output_file_path, file_name, schedule, file_extension):
         filepath = output_file_path + "\\" + file_name + "." + file_extension
@@ -261,11 +261,11 @@ class CR_LoadScheduleFromFile:
     RETURN_TYPES = ("SCHEDULE", "STRING", )
     RETURN_NAMES = ("SCHEDULE", "show_text", )
     FUNCTION = "csvinput"
-    CATEGORY = icons.get("Comfyroll/Animation/Schedule")    
+    CATEGORY = icons.get("comfyrock/Animation/Schedule")    
     
     def csvinput(self, input_file_path, file_name, file_extension):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Schedule-Nodes#cr-load-schedule-from-file"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Schedule-Nodes#cr-load-schedule-from-file"
         
         filepath = input_file_path + "\\" + file_name + "." + file_extension
         print(f"CR Load Schedule From File: Loading {filepath}")
@@ -313,11 +313,11 @@ class CR_BitSchedule:
     RETURN_TYPES = ("STRING", "STRING", )
     RETURN_NAMES = ("SCHEDULE", "show_text", )
     FUNCTION = "bit_schedule"
-    CATEGORY = icons.get("Comfyroll/Animation/Schedule")    
+    CATEGORY = icons.get("comfyrock/Animation/Schedule")    
 
     def bit_schedule(self, binary_string, interval, loops=1):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Schedule-Nodes#cr-bit-schedule"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Schedule-Nodes#cr-bit-schedule"
     
         schedule = []
 
@@ -351,7 +351,7 @@ NODE_CLASS_MAPPINGS = {
     "CR Combine Schedules":CR_CombineSchedules,
     "CR Central Schedule":CR_CentralSchedule,
     "CR Schedule To ScheduleList":CR_ScheduleToScheduleList,  
-    "CR Schedule Input Switch": Comfyroll_ScheduleInputSwitch, 
+    "CR Schedule Input Switch": comfyrock_ScheduleInputSwitch, 
     "CR Output Schedule To File":CR_OutputScheduleToFile,
     "CR Load Schedule From File":CR_LoadScheduleFromFile,
     "CR Bit Schedule": CR_BitCyclicSchedule,

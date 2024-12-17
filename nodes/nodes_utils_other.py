@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -32,11 +32,11 @@ class CR_ClampValue:
     RETURN_TYPES =("FLOAT", "STRING", )
     RETURN_NAMES =("a", "show_help", )
     FUNCTION = "clamp_value"    
-    CATEGORY = icons.get("Comfyroll/Utils/Other")
+    CATEGORY = icons.get("comfyrock/Utils/Other")
     
     def clamp_value(self, a, range_min, range_max):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-clamp-value"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-clamp-value"
 
         a = max(range_min, min(a, range_max))        
         
@@ -57,11 +57,11 @@ class CR_IntegerMultipleOf:
     RETURN_TYPES =("INT", "STRING", )
     RETURN_NAMES =("INT", "show_help", )
     FUNCTION = "int_multiple_of"    
-    CATEGORY = icons.get("Comfyroll/Utils/Other")
+    CATEGORY = icons.get("comfyrock/Utils/Other")
     
     def int_multiple_of(self, integer, multiple=8):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-integer-multiple"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-integer-multiple"
         
         if multiple == 0:
             return (int(integer), show_help, )
@@ -78,12 +78,12 @@ class CR_Value:
 
     RETURN_TYPES = ("FLOAT", "INT", "STRING", )
     RETURN_NAMES = ("FLOAT", "INT", "show_help", )
-    CATEGORY = icons.get("Comfyroll/Utils/Other")
+    CATEGORY = icons.get("comfyrock/Utils/Other")
     FUNCTION = "get_value"
 
     def get_value(self, value):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-value"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-value"
         
         return (float(value), int(value), show_help, )
 
@@ -106,11 +106,11 @@ class CR_MathOperation:
     RETURN_TYPES =("FLOAT", "STRING", )
     RETURN_NAMES =("a", "show_help", )
     FUNCTION = "do_math"    
-    CATEGORY = icons.get("Comfyroll/Utils/Other")
+    CATEGORY = icons.get("comfyrock/Utils/Other")
 
     def do_math(self, a, operation, decimal_places):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-math-operation"    
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-math-operation"    
 
         #Apply the specified operation on the input value 'a'.
         if operation == 'sin':
@@ -152,11 +152,11 @@ class CR_GetParameterFromPrompt:
     RETURN_TYPES =("STRING", any_type, "FLOAT", "BOOLEAN", "STRING", )
     RETURN_NAMES =("prompt",  "text", "float", "boolean", "show_help", )
     FUNCTION = "get_string"    
-    CATEGORY = icons.get("Comfyroll/Utils/Other")
+    CATEGORY = icons.get("comfyrock/Utils/Other")
 
     def get_string(self, prompt, search_string):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-find-string-in-prompt"    
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-find-string-in-prompt"    
 
         return_string = ""
         return_value = 0
@@ -225,11 +225,11 @@ class CR_SelectResizeMethod:
     RETURN_TYPES =(any_type, "STRING", )
     RETURN_NAMES =("method", "show_help", )
     FUNCTION = "set_switch"    
-    CATEGORY = icons.get("Comfyroll/Utils/Other")
+    CATEGORY = icons.get("comfyrock/Utils/Other")
 
     def set_switch(self, method):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-select-resize-method"    
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-select-resize-method"    
       
         return (method, show_help, )
 
@@ -251,11 +251,11 @@ class CR_SetValueOnBinary:
     RETURN_TYPES =("INT", "FLOAT", "STRING", )
     RETURN_NAMES =("INT", "FLOAT", "show_help", )
     FUNCTION = "set_value"    
-    CATEGORY = icons.get("Comfyroll/Utils/Conditional")
+    CATEGORY = icons.get("comfyrock/Utils/Conditional")
     
     def set_value(self, binary, value_if_1, value_if_0):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-set-value-on-boolean"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-set-value-on-boolean"
 
         if binary == 1:
             return (int(value_if_1), value_if_1, show_help, )   
@@ -278,11 +278,11 @@ class CR_SetValueOnBoolean:
     RETURN_TYPES =("INT", "FLOAT", "STRING", )
     RETURN_NAMES =("INT", "FLOAT", "show_help", )
     FUNCTION = "set_value"    
-    CATEGORY = icons.get("Comfyroll/Utils/Conditional")
+    CATEGORY = icons.get("comfyrock/Utils/Conditional")
     
     def set_value(self, boolean, value_if_true, value_if_false):
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-set-value-on-boolean"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-set-value-on-boolean"
 
         if boolean == True:
             return (int(value_if_true), value_if_true, show_help, )   
@@ -308,11 +308,11 @@ class CR_SetValueOnString:
     RETURN_TYPES = (any_type, "BOOLEAN", "STRING", )
     RETURN_NAMES = ("STRING", "BOOLEAN","show_help", )
     FUNCTION = "replace_text"
-    CATEGORY = icons.get("Comfyroll/Utils/Conditional")
+    CATEGORY = icons.get("comfyrock/Utils/Conditional")
 
     def replace_text(self, text, test_string, value_if_true, value_if_false):
     
-        show_help =  "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-set-value-on-string" 
+        show_help =  "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-set-value-on-string" 
         
         if test_string in text:
             # Test condition is true, replace with value_if_true
@@ -348,11 +348,11 @@ class CR_SetSwitchFromString:
     RETURN_TYPES =("INT", "STRING", )
     RETURN_NAMES =("switch", "show_help", )
     FUNCTION = "set_switch"
-    CATEGORY = icons.get("Comfyroll/Utils/Conditional")
+    CATEGORY = icons.get("comfyrock/Utils/Conditional")
 
     def set_switch(self, text, switch_1="", switch_2="", switch_3="", switch_4=""):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Other-Nodes#cr-set-switch-from-string"    
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Other-Nodes#cr-set-switch-from-string"    
       
         if text == switch_1:
             switch = 1

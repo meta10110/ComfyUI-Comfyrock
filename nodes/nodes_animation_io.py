@@ -67,7 +67,7 @@ class CR_LoadAnimationFrames:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "load_image_sequence"
-    CATEGORY = icons.get("Comfyroll/Animation/IO")
+    CATEGORY = icons.get("comfyrock/Animation/IO")
 
     def load_image_sequence(self, image_sequence_folder, start_index, max_frames):
         image_path = os.path.join(self.input_dir, image_sequence_folder)
@@ -82,7 +82,7 @@ class CR_LoadAnimationFrames:
             image = torch.from_numpy(image)[None,]
             image = image.squeeze()
             sample_frames.append(image)
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/IO-Nodes#cr-load-animation-frames"                        
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/IO-Nodes#cr-load-animation-frames"                        
         return (torch.stack(sample_frames), show_help, )
  
 #---------------------------------------------------------------------------------------------------------------------#
@@ -109,14 +109,14 @@ class CR_LoadFlowFrames:
                     } 
                 }
 
-    CATEGORY = icons.get("Comfyroll/Animation/IO")
+    CATEGORY = icons.get("comfyrock/Animation/IO")
 
     RETURN_TYPES = ("IMAGE", "IMAGE", "INT", "STRING", )
     RETURN_NAMES = ("current_image", "previous_image", "current_frame", "show_help", )
     FUNCTION = "load_images"
 
     def load_images(self, file_pattern, skip_start_frames, input_folder, sort_by, current_frame, input_path=''):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/IO-Nodes#cr-load-flow-frames"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/IO-Nodes#cr-load-flow-frames"
 
         input_dir = folder_paths.input_directory
         
@@ -194,7 +194,7 @@ class CR_OutputFlowFrames:
     RETURN_TYPES = ()
     FUNCTION = "save_images"
     OUTPUT_NODE = True
-    CATEGORY = icons.get("Comfyroll/Animation/IO")
+    CATEGORY = icons.get("comfyrock/Animation/IO")
 
     def save_images(self, output_folder, current_image, current_frame, output_path='', filename_prefix="CR", interpolated_img=None):
     

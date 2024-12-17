@@ -6,12 +6,12 @@ Given that the codebase from the original repository hasn't seen an update in ag
 
 ## About This Repository
 
-This repository is a modified version based on the [original author's project](https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes). I have made some customizations and improvements on this project to suit my needs.
+This repository is a modified version based on the [original author's project](https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes). I have made some customizations and improvements on this project to suit my needs.
 
 
 # Patch Notes
 
-https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/blob/main/Patch_Notes.md
+https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/blob/main/Patch_Notes.md
 
 # List of Custom Nodes
   

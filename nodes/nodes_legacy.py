@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -22,10 +22,10 @@ class CR_ImageSize:
     RETURN_TYPES = ("INT", "INT", "FLOAT", "STRING", )
     RETURN_NAMES = ("Width", "Height", "upscale_factor", "show_help", )
     FUNCTION = "ImageSize"
-    CATEGORY = icons.get("Comfyroll/Essential/Legacy")
+    CATEGORY = icons.get("comfyrock/Essential/Legacy")
 
     def ImageSize(self, width, height, upscale_factor):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Legacy-Nodes#cr-image-size"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Legacy-Nodes#cr-image-size"
         return(width, height, upscale_factor, show_help, )
         
 #---------------------------------------------------------------------------------------------------------------------#
@@ -52,11 +52,11 @@ class CR_AspectRatio_SDXL:
     #RETURN_NAMES = ("Width", "Height")
     FUNCTION = "Aspect_Ratio"
 
-    CATEGORY = icons.get("Comfyroll/Essential/Legacy")
+    CATEGORY = icons.get("comfyrock/Essential/Legacy")
 
     def Aspect_Ratio(self, width, height, aspect_ratio, swap_dimensions, upscale_factor1, upscale_factor2, batch_size):
        
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Legacy-Nodes#cr-aspect-ratio-sdxl"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Legacy-Nodes#cr-aspect-ratio-sdxl"
 
         if aspect_ratio == "1:1 square 1024x1024":
             width, height = 1024, 1024
@@ -105,11 +105,11 @@ class CR_PromptMixer:
     RETURN_NAMES = ("pos_g", "pos_l", "pos_r", "neg_g", "neg_l", "neg_r", )
     FUNCTION = "mixer"
 
-    CATEGORY = icons.get("Comfyroll/Essential/Legacy")
+    CATEGORY = icons.get("comfyrock/Essential/Legacy")
 
     def mixer(self, prompt_positive, prompt_negative, style_positive, style_negative, preset):
     
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Legacy-Nodes#cr-prompt-mixer"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Legacy-Nodes#cr-prompt-mixer"
 
         if preset == "preset 1":
             pos_g = prompt_positive
@@ -164,10 +164,10 @@ class CR_SeedToInt:
     RETURN_TYPES = ("INT", "STRING", )
     RETURN_NAMES = ("INT", "show_help", )
     FUNCTION = "seed_to_int"
-    CATEGORY = icons.get("Comfyroll/Essential/Legacy")
+    CATEGORY = icons.get("comfyrock/Essential/Legacy")
 
     def seed_to_int(self, seed):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Conversion-Nodes#cr-seed-to-int"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Conversion-Nodes#cr-seed-to-int"
         return (seed.get('seed'), show_help, )
  
 #---------------------------------------------------------------------------------------------------------------------#

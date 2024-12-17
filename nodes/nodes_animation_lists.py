@@ -41,7 +41,7 @@ class CR_ModelList:
     RETURN_TYPES = ("MODEL_LIST", "STRING", )
     RETURN_NAMES = ("MODEL_LIST", "show_text", )
     FUNCTION = "model_list"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def model_list(self, ckpt_name1, alias1, ckpt_name2, alias2, ckpt_name3, alias3, ckpt_name4, alias4,
         ckpt_name5, alias5, model_list=None):
@@ -117,7 +117,7 @@ class CR_LoRAList:
     RETURN_TYPES = ("LORA_LIST", "STRING", )
     RETURN_NAMES = ("LORA_LIST", "show_text", )
     FUNCTION = "lora_list"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def lora_list(self, lora_name1, model_strength_1, clip_strength_1, alias1,
     lora_name2, model_strength_2, clip_strength_2, alias2,
@@ -179,7 +179,7 @@ class CR_TextList:
     RETURN_TYPES = ("TEXT_LIST", "STRING", )
     RETURN_NAMES = ("TEXT_LIST", "show_text", )
     FUNCTION = "text_list"
-    CATEGORY = icons.get("Comfyroll/Animation/List")
+    CATEGORY = icons.get("comfyrock/Animation/List")
 
     def text_list(self, text_1, alias1, text_2, alias2, text_3, alias3, text_4, alias4, text_5, alias5, text_list=None):
 
@@ -243,7 +243,7 @@ class CR_TextListSimple:
     RETURN_TYPES = ("TEXT_LIST_SIMPLE", "STRING", )
     RETURN_NAMES = ("TEXT_LIST_SIMPLE", "show_help", )
     FUNCTION = "text_list_simple"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def text_list_simple(self, text_1, text_2, text_3,  text_4, text_5, text_list_simple=None):
 
@@ -269,7 +269,7 @@ class CR_TextListSimple:
         if text_5 != "" and text_5 != None:
             texts.append(text_5),
             
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-text-list-simple"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-text-list-simple"
 
         return (texts, show_help, )
  
@@ -298,7 +298,7 @@ class CR_ImageList:
     RETURN_TYPES = ("IMAGE_LIST", "STRING", )
     RETURN_NAMES = ("IMAGE_LIST", "show_help", )
     FUNCTION = "image_list"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def image_list(self,
         image_1=None, alias1=None,
@@ -331,7 +331,7 @@ class CR_ImageList:
         if image_5 != None:
             images.extend([(alias5, image_5)]),
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-image-list"          
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-image-list"          
 
         return (images, show_help, )   
         
@@ -355,7 +355,7 @@ class CR_ImageListSimple:
     RETURN_TYPES = ("IMAGE_LIST_SIMPLE", "STRING", )
     RETURN_NAMES = ("IMAGE_LIST_SIMPLE", "show_help", )
     FUNCTION = "image_list_simple"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def image_list_simple(self,
         image_1=None, image_2=None, image_3=None,  image_4=None, image_5=None,
@@ -383,7 +383,7 @@ class CR_ImageListSimple:
         if image_5 != None:
             images.append(image_5),
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/List-Nodes#cr-image-list-simple"         
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/List-Nodes#cr-image-list-simple"         
 
         return (images, show_help, )
 
@@ -400,7 +400,7 @@ class CR_InputTextList:
     RETURN_TYPES = ("TEXT_LIST_SIMPLE", "STRING", )
     RETURN_NAMES = ("TEXT_LIST_SIMPLE", "show_help", )
     FUNCTION = "text_list_simple"
-    CATEGORY = icons.get("Comfyroll/Animation/Legacy")
+    CATEGORY = icons.get("comfyrock/Animation/Legacy")
 
     def text_list_simple(self, text):
 
@@ -417,7 +417,7 @@ class CR_InputTextList:
                 
             texts.append(line),    
             
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Animation-Utility-Nodes#cr-input-text-list"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Animation-Utility-Nodes#cr-input-text-list"
 
         return (texts, show_help, )
         

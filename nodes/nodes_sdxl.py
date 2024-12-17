@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -39,7 +39,7 @@ class CR_PromptMixPresets:
     RETURN_TYPES = ("STRING", "STRING", "STRING", "STRING", "STRING", "STRING", "STRING", )
     RETURN_NAMES = ("pos_g", "pos_l", "pos_r", "neg_g", "neg_l", "neg_r", "show_help", )
     FUNCTION = "mixer"
-    CATEGORY = icons.get("Comfyroll/SDXL")
+    CATEGORY = icons.get("comfyrock/SDXL")
 
     def mixer(self, prompt_positive, prompt_negative, style_positive, style_negative, preset):
         if preset == "default with no style text":
@@ -77,7 +77,7 @@ class CR_PromptMixPresets:
             neg_g = prompt_negative
             neg_l = prompt_negative
             neg_r = style_negative
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/SDXL-Nodes#cr-sdxl-prompt-mix-presets"            
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/SDXL-Nodes#cr-sdxl-prompt-mix-presets"            
         return (pos_g, pos_l, pos_r, neg_g, neg_l, neg_r, show_help, )
 
 #---------------------------------------------------------------------------------------------------------------------#
@@ -93,10 +93,10 @@ class CR_SDXLStyleText:
     RETURN_TYPES = ("STRING", "STRING", "STRING", )
     RETURN_NAMES = ("positive_prompt_text_l", "negative_prompt_text_l" , "show_help", )
     FUNCTION = "get_value"
-    CATEGORY = icons.get("Comfyroll/SDXL")
+    CATEGORY = icons.get("comfyrock/SDXL")
 
     def get_value(self, positive_style, negative_style):
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/SDXL-Nodes#cr-sdxl-style-text"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/SDXL-Nodes#cr-sdxl-style-text"
         return (positive_style, negative_style, show_help, )
 
 #---------------------------------------------------------------------------------------------------------------------#
@@ -122,7 +122,7 @@ class CR_SDXLBasePromptEncoder:
     RETURN_TYPES = ("CONDITIONING", "CONDITIONING", "STRING", )
     RETURN_NAMES = ("base_positive", "base_negative", "show_help", )
     FUNCTION = "encode"
-    CATEGORY = icons.get("Comfyroll/SDXL")
+    CATEGORY = icons.get("comfyrock/SDXL")
 
     def encode(self, base_clip, pos_g, pos_l, neg_g, neg_l, base_width, base_height, crop_w, crop_h, target_width, target_height, preset,):
         empty = base_clip.tokenize("")
@@ -189,7 +189,7 @@ class CR_SDXLBasePromptEncoder:
             base_positive = res1 + res3
             base_negative = res2 + res4
             
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/SDXL-Nodes#cr-sdxl-base-prompt-encoder"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/SDXL-Nodes#cr-sdxl-base-prompt-encoder"
         return (base_positive, base_negative, show_help, )
                
 #---------------------------------------------------------------------------------------------------------------------#

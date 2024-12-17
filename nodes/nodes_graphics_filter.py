@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------------------------#
-# Comfyroll Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes                             
+# comfyrock Studio custom nodes by RockOfFire and Akatsuzi    https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes                             
 # for ComfyUI                                                 https://github.com/comfyanonymous/ComfyUI                                               
 #---------------------------------------------------------------------------------------------------------------------#
 
@@ -44,7 +44,7 @@ class CR_ColorTint:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )    
     FUNCTION = "color_tint"
-    CATEGORY = icons.get("Comfyroll/Graphics/Filter")
+    CATEGORY = icons.get("comfyrock/Graphics/Filter")
 
     def color_tint(self, image: torch.Tensor, strength, mode: str="sepia", tint_color_hex='#000000'):
     
@@ -90,7 +90,7 @@ class CR_ColorTint:
 
         result = tinted * strength + image * (1 - strength)
         
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Filter-Nodes#cr-color-tint"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Filter-Nodes#cr-color-tint"
         
         return (result, show_help, ) 
 
@@ -126,7 +126,7 @@ class CR_HalftoneFilter:
     RETURN_TYPES = ("IMAGE", "STRING", )
     RETURN_NAMES = ("IMAGE", "show_help", )
     FUNCTION = "halftone_effect"
-    CATEGORY = icons.get("Comfyroll/Graphics/Filter")
+    CATEGORY = icons.get("comfyrock/Graphics/Filter")
                  
     def tensor_to_pil(self, tensor):
         if tensor.ndim == 4 and tensor.shape[0] == 1:  # Check for batch dimension
@@ -283,7 +283,7 @@ class CR_HalftoneFilter:
 
             dots.append(half_tone)
             
-            show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Filter-Nodes#cr-halftone-filter"
+            show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Filter-Nodes#cr-halftone-filter"
 
         return (dots, show_help, )  
  
@@ -307,7 +307,7 @@ class CR_VignetteFilter:
     RETURN_TYPES = ("IMAGE", "MASK", "STRING", )
     RETURN_NAMES = ("IMAGE", "MASK", "show_help", )
     FUNCTION = "make_vignette"
-    CATEGORY = icons.get("Comfyroll/Graphics/Filter")
+    CATEGORY = icons.get("comfyrock/Graphics/Filter")
     
     def make_vignette(self, image, feather_amount, reverse,
                       vignette_shape='circle',
@@ -401,7 +401,7 @@ class CR_VignetteFilter:
         images = torch.cat(images, dim=0)
         masks = torch.cat(masks, dim=0)
 
-        show_help = "https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki/Layout-Nodes#cr-vignette-filter"
+        show_help = "https://github.com/Suzie1/ComfyUI_comfyrock_CustomNodes/wiki/Layout-Nodes#cr-vignette-filter"
 
         return (images, masks, show_help, )
 
