@@ -1,24 +1,13 @@
-# 🧩 Comfyroll Studio
+# Comfyrock
 
-Co-authored by Suzie1 and RockOfFire
+## Introduction
 
-Current version: 1.76
+Given that the codebase from the original repository hasn't seen an update in ages, I've made a few tweaks to the source code to make it more user-friendly for myself.
 
-# Wiki
+## About This Repository
 
-Please use our new wiki for info on the custom nodes, and lots of examples of their use.
+This repository is a modified version based on the [original author's project](https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes). I have made some customizations and improvements on this project to suit my needs.
 
-https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes/wiki
-
-# Installation
-
-1. cd custom_nodes
-2. git clone https://github.com/Suzie1/ComfyUI_Comfyroll_CustomNodes.git
-3. Restart ComfyUI
-
-You can also install the nodes using the following methods:
-* install using [ComfyUI Manager](https://github.com/ltdrdata/ComfyUI-Manager)
-* download from [CivitAI](https://civitai.com/models/87609/comfyroll-custom-nodes-for-comfyui)
 
 # Patch Notes
 
@@ -290,38 +279,3 @@ __💀 Legacy Nodes__
 * CR Image Size, replaced by CR Aspect Ratio
 * CR SDXL Prompt Mixer, replaced by CR SDXL Prompt Mix Presets
 
-# Comfyroll Workflow Templates
-
-The nodes were originally made for use in the Comfyroll Template Workflows.
-
-[Comfyroll Template Workflows](https://civitai.com/models/59806/comfyroll-template-workflows)
-
-[Comfyroll Pro Templates](https://civitai.com/models/85619/comfyroll-pro-template)
-
-[Comfyroll SDXL Workflow Templates](https://civitai.com/models/118005/comfyroll-sdxl-workflow-templates)
-
-[SDXL Workflow for ComfyUI with Multi-ControlNet](https://civitai.com/models/129858/sdxl-workflow-for-comfyui-with-multi-controlnet)
-
-[SDXL and SD1.5 Model Merge Templates for ComfyUI](https://civitai.com/models/123125/sdxl-and-sd15-model-merge-templates-for-comfyui)
-
-# Credits
-
-comfyanonymous/[ComfyUI](https://github.com/comfyanonymous/ComfyUI) - A powerful and modular stable diffusion GUI.
-
-WASasquatch/[was-node-suite-comfyui](https://github.com/WASasquatch/was-node-suite-comfyui) - A powerful custom node extensions of ComfyUI.
-
-TinyTerra/[ComfyUI_tinyterraNodes](https://github.com/TinyTerra/ComfyUI_tinyterraNodes) - A selection of nodes for Stable Diffusion ComfyUI
-
-hnmr293/[ComfyUI-nodes-hnmr](https://github.com/hnmr293/ComfyUI-nodes-hnmr) - ComfyUI custom nodes - merge, grid (aka xyz-plot) and others
-
-SeargeDP/[SeargeSDXL](https://github.com/SeargeDP) - ComfyUI custom nodes - Prompt nodes and Conditioning nodes
-
-LucianoCirino/[efficiency-nodes-comfyui](https://github.com/LucianoCirino/efficiency-nodes-comfyui) - A collection of ComfyUI custom nodes.
-
-SLAPaper/[ComfyUI-Image-Selector](https://github.com/SLAPaper/ComfyUI-Image-Selector) - Select one or some of images from a batch
-
-pythongosssss/[ComfyUI-Custom-Scripts](https://github.com/pythongosssss/ComfyUI-Custom-Scripts) - Enhancements & experiments for ComfyUI, mostly focusing on UI features
-
-bash-j/[mikey_nodes](https://github.com/bash-j/mikey_nodes) - comfy nodes from mikey
-
-ltdrdata/[ComfyUI-Impact-Pack](https://github.com/ltdrdata/ComfyUI-Impact-Pack) - 
